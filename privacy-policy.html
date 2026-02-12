@@ -9,24 +9,26 @@
     :root{
       --bg:#0b0f17; --card:#111827; --text:#e5e7eb; --muted:#9ca3af;
       --accent:#22c55e; --border:#1f2937; --warnbg:#fff7ed; --warn:#9a3412;
+      --pill:#0b1220;
     }
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:linear-gradient(180deg,var(--bg),#070a10);color:var(--text);line-height:1.6}
     header{padding:48px 16px 16px;max-width:980px;margin:0 auto}
     h1{margin:0 0 8px;font-size:34px;letter-spacing:-0.02em}
     .sub{color:var(--muted);margin:0 0 20px}
     main{max-width:980px;margin:0 auto;padding:0 16px 48px}
-    .card{background:rgba(17,24,39,.85);border:1px solid var(--border);border-radius:16px;padding:18px 18px;margin:14px 0;box-shadow:0 10px 25px rgba(0,0,0,.25)}
+    .card{background:rgba(17,24,39,.88);border:1px solid var(--border);border-radius:16px;padding:18px 18px;margin:14px 0;box-shadow:0 10px 25px rgba(0,0,0,.25)}
     h2{margin:0 0 8px;font-size:20px}
     h3{margin:16px 0 8px;font-size:16px;color:#d1d5db}
     ul{margin:8px 0 0 18px}
     a{color:var(--accent);text-decoration:none}
     a:hover{text-decoration:underline}
     .muted{color:var(--muted)}
+    .badge{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:12px;background:rgba(11,18,32,.55)}
     .placeholder{
       display:inline-block;
       background:rgba(34,197,94,.12);
-      border:1px dashed rgba(34,197,94,.45);
-      padding:2px 6px;border-radius:8px
+      border:1px dashed rgba(34,197,94,.55);
+      padding:2px 8px;border-radius:10px
     }
     .warning{
       background:var(--warnbg);
@@ -36,252 +38,320 @@
       padding:14px 14px;
     }
     .warning strong{color:var(--warn)}
-    code{background:#0b1220;border:1px solid #1f2a44;padding:2px 6px;border-radius:8px}
+    code{background:var(--pill);border:1px solid #1f2a44;padding:2px 6px;border-radius:8px;color:#e5e7eb}
+    table{width:100%;border-collapse:collapse;margin-top:10px}
+    th,td{border:1px solid var(--border);padding:10px;vertical-align:top}
+    th{background:rgba(11,18,32,.65);text-align:left;color:#d1d5db}
+    .pill{display:inline-block;padding:2px 10px;border:1px solid var(--border);border-radius:999px;background:rgba(11,18,32,.55);color:var(--muted);font-size:12px}
     footer{max-width:980px;margin:0 auto;padding:0 16px 28px;color:var(--muted);font-size:14px}
-    .badge{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:12px}
   </style>
 </head>
 
 <body>
-  <header>
-    <div class="badge">Privacy Policy • Tau</div>
-    <h1>Privacy Policy</h1>
-    <p class="sub">
-      Informativa ai sensi del Regolamento (UE) 2016/679 (“GDPR”) e della normativa italiana applicabile.
+<header>
+  <div class="badge">Privacy Policy • Tau</div>
+  <h1>Privacy Policy</h1>
+  <p class="sub">
+    Informativa ai sensi del Regolamento (UE) 2016/679 (“GDPR”) e della normativa italiana applicabile.
+  </p>
+
+  <div class="warning">
+    <strong>Campi da completare:</strong>
+    alcuni dati del Titolare (es. P.IVA) non sono ancora disponibili. Sono evidenziati così:
+    <span class="placeholder"><strong>DA COMPLETARE</strong></span>.
+  </div>
+</header>
+
+<main>
+
+  <section class="card">
+    <h2>1) Titolare del trattamento</h2>
+    <p>Il Titolare del trattamento dei dati personali è:</p>
+    <ul>
+      <li><strong>Denominazione/Nome:</strong> <span class="placeholder"><strong>DA COMPLETARE (Nome Cognome / Società)</strong></span></li>
+      <li><strong>Indirizzo:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
+      <li><strong>P.IVA / Cod. Fiscale:</strong> <span class="placeholder"><strong>DA COMPLETARE (P.IVA non ancora disponibile)</strong></span></li>
+      <li><strong>Email privacy:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
+    </ul>
+    <p class="muted">
+      “Tau” è un’app di incontri che consente la creazione di un profilo, la scoperta di altri utenti, l’interazione tramite chat e la partecipazione a gruppi e live.
     </p>
+  </section>
 
-    <div class="warning">
-      <strong>Campi da completare:</strong>
-      alcuni dati del Titolare (es. P.IVA) non sono ancora disponibili. Li trovi evidenziati così:
-      <span class="placeholder"><strong>DA COMPLETARE</strong></span>.
-    </div>
-  </header>
-
-  <main>
-    <section class="card">
-      <h2>1) Titolare del trattamento</h2>
-      <p>
-        Il Titolare del trattamento dei dati è:
-      </p>
-      <ul>
-        <li><strong>Denominazione/Nome:</strong> <span class="placeholder"><strong>DA COMPLETARE (Es. Nome Cognome / Società)</strong></span></li>
-        <li><strong>Indirizzo sede/Residenza:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
-        <li><strong>P.IVA / Cod. Fiscale:</strong> <span class="placeholder"><strong>DA COMPLETARE (P.IVA non ancora disponibile)</strong></span></li>
-        <li><strong>Email di contatto privacy:</strong> <span class="placeholder"><strong>DA COMPLETARE (es. privacy@tau.app)</strong></span></li>
-      </ul>
-      <p class="muted">
-        “Tau” è un’app di incontri che consente la creazione di un profilo, l’interazione con altri utenti e lo scambio di messaggi.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>2) Responsabile della Protezione dei Dati (DPO)</h2>
-      <p>
-        Al momento, il Titolare <strong>non ha nominato un DPO</strong> (se e quando verrà nominato, i relativi contatti verranno pubblicati qui).
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>3) Dati trattati</h2>
-
-      <h3>3.1 Dati forniti dall’utente</h3>
-      <ul>
-        <li><strong>Dati account:</strong> nome/username, email/numero di telefono (se previsti), password o credenziali di accesso.</li>
-        <li><strong>Dati profilo:</strong> foto, bio, età/data di nascita, genere (se inserito), preferenze di ricerca (es. range età, distanza), interessi.</li>
-        <li><strong>Contenuti e comunicazioni:</strong> messaggi, immagini e altri contenuti inviati in chat.</li>
-        <li><strong>Segnalazioni:</strong> contenuti inviati in caso di report/assistenza o contestazioni.</li>
-      </ul>
-
-      <h3>3.2 Dati raccolti automaticamente</h3>
-      <ul>
-        <li><strong>Dati tecnici:</strong> indirizzo IP, identificativi dispositivo, sistema operativo, versione app, lingua, log di errore.</li>
-        <li><strong>Dati di utilizzo:</strong> eventi essenziali per il funzionamento e la sicurezza (es. accessi, sessioni, crash).</li>
-      </ul>
-
-      <h3>3.3 Dati di localizzazione</h3>
-      <p>
-        Se l’utente abilita i permessi di localizzazione, Tau può trattare:
-      </p>
-      <ul>
-        <li><strong>Posizione approssimativa</strong> (ad es. per mostrare profili in zona);</li>
-        <li><strong>Posizione precisa</strong> solo se espressamente autorizzata nelle impostazioni del dispositivo/app (se implementata).</li>
-      </ul>
-      <p class="muted">L’utente può revocare i permessi in qualsiasi momento dalle impostazioni del dispositivo.</p>
-
-      <h3>3.4 Categorie particolari di dati (art. 9 GDPR)</h3>
-      <p>
-        In un’app di incontri, alcuni dati potrebbero rientrare nelle <strong>categorie particolari</strong> (es. orientamento sessuale o informazioni sensibili) <strong>solo se l’utente decide di inserirli</strong> nel profilo o nei messaggi.
-        In tal caso, il trattamento avviene <strong>sulla base del consenso esplicito</strong> dell’utente (art. 9, par. 2, lett. a GDPR), che può essere revocato in ogni momento (senza pregiudicare la liceità del trattamento precedente).
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>4) Finalità e basi giuridiche</h2>
-      <ul>
-        <li>
-          <strong>Fornitura del servizio</strong> (creazione account, profilo, matching, messaggistica, gestione impostazioni).<br/>
-          <span class="muted">Base giuridica: esecuzione del contratto / misure precontrattuali (art. 6(1)(b) GDPR).</span>
-        </li>
-        <li>
-          <strong>Sicurezza, prevenzione abusi e moderazione</strong> (anti-spam, anti-frode, tutela utenti, enforcement regole).<br/>
-          <span class="muted">Base giuridica: legittimo interesse (art. 6(1)(f) GDPR) e/o obblighi legali (art. 6(1)(c)).</span>
-        </li>
-        <li>
-          <strong>Assistenza e supporto</strong> (ticket, richieste, segnalazioni).<br/>
-          <span class="muted">Base giuridica: esecuzione del contratto (art. 6(1)(b)) e/o legittimo interesse (art. 6(1)(f)).</span>
-        </li>
-        <li>
-          <strong>Adempimenti legali</strong> (richieste autorità, contabilità se applicabile).<br/>
-          <span class="muted">Base giuridica: obbligo legale (art. 6(1)(c) GDPR).</span>
-        </li>
-        <li>
-          <strong>Comunicazioni non essenziali / marketing</strong> (newsletter, promo) solo se attivate.<br/>
-          <span class="muted">Base giuridica: consenso (art. 6(1)(a) GDPR). </span>
-        </li>
-        <li>
-          <strong>Analytics non essenziali</strong> (statistiche, miglioramento) solo se attivati e, dove richiesto, con consenso.<br/>
-          <span class="muted">Base giuridica: consenso (art. 6(1)(a)) oppure legittimo interesse (art. 6(1)(f)) nei limiti consentiti.</span>
-        </li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>5) Modalità di trattamento e misure di sicurezza</h2>
-      <p>
-        I dati sono trattati con strumenti elettronici e misure tecniche e organizzative adeguate per garantire un livello di sicurezza commisurato al rischio
-        (es. controlli di accesso, cifratura in transito, logging, backup ove applicabile).
-      </p>
-      <p class="muted">
-        Nessun sistema è infallibile: ti invitiamo a non condividere in chat dati che non vuoi rendere noti (es. documenti, dati finanziari).
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>6) Conservazione dei dati</h2>
-      <ul>
-        <li><strong>Dati account e profilo:</strong> conservati finché l’account resta attivo. Su richiesta di cancellazione, saranno eliminati o anonimizzati salvo obblighi di legge.</li>
-        <li><strong>Messaggi e contenuti:</strong> conservati per consentire la fruizione del servizio; possono essere eliminati dall’utente se la funzione è disponibile.</li>
-        <li><strong>Log di sicurezza e anti-abuso:</strong> conservati per un periodo ragionevole e proporzionato (es. fino a <span class="placeholder"><strong>DA COMPLETARE (es. 6-12 mesi)</strong></span>) per prevenire frodi e garantire sicurezza.</li>
-        <li><strong>Assistenza/Segnalazioni:</strong> per il tempo necessario a gestire la richiesta e per eventuale tutela legale.</li>
-      </ul>
-      <p class="muted">
-        I tempi esatti possono variare in base a obblighi normativi e necessità di sicurezza/gestione del servizio.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>7) Destinatari dei dati (Responsabili del trattamento)</h2>
-      <p>
-        I dati possono essere trattati da fornitori che agiscono come <strong>Responsabili del trattamento</strong> (art. 28 GDPR) o, ove applicabile, come titolari autonomi.
-      </p>
-
-      <h3>7.1 Infrastruttura e hosting</h3>
-      <ul>
-        <li>
-          <strong>Firebase / Google Cloud (Google LLC / Google Ireland Limited)</strong> – autenticazione, database, storage, notifiche, crash reporting (se utilizzati).<br/>
-          <span class="muted">Nota: i servizi effettivamente usati dipendono dall’implementazione dell’app.</span>
-        </li>
-        <li>
-          <strong>GitHub Pages (GitHub, Inc.)</strong> – hosting di questa pagina informativa.
-        </li>
-      </ul>
-
-      <h3>7.2 Store e pagamenti</h3>
-      <ul>
-        <li><strong>Apple App Store / Google Play</strong> – gestione download, aggiornamenti e (se previsto) acquisti in-app. I relativi operatori possono agire come titolari autonomi per dati di pagamento e di store.</li>
-      </ul>
-
-      <p class="muted">
-        Su richiesta, il Titolare può fornire maggiori informazioni sui fornitori effettivamente utilizzati e sui ruoli privacy applicabili.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>8) Trasferimenti extra SEE</h2>
-      <p>
-        Alcuni fornitori potrebbero trattare dati anche al di fuori dello Spazio Economico Europeo (SEE).
-        In tali casi, il trasferimento avviene nel rispetto degli artt. 44 e ss. GDPR (es. decisioni di adeguatezza, Clausole Contrattuali Standard, misure supplementari dove necessario).
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>9) Profilazione e decisioni automatizzate</h2>
-      <p>
-        Tau può utilizzare logiche automatiche per <strong>suggerire profili compatibili</strong> (matching) in base alle preferenze e ai parametri impostati dall’utente (es. distanza, età, interessi).
-        Queste attività non producono, di norma, effetti giuridici sull’utente.
-      </p>
-      <p class="muted">
-        Se in futuro venissero introdotte decisioni automatizzate con effetti significativi ai sensi dell’art. 22 GDPR, l’informativa verrà aggiornata.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>10) Minori</h2>
-      <p>
-        Tau è destinata a utenti <strong>maggiorenni</strong> (18+), salvo diverse regole applicabili nel tuo Paese.
-        Se ritieni che un minore abbia fornito dati personali, contattaci per la rimozione.
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>11) Diritti dell’interessato</h2>
-      <p>
-        L’utente può esercitare i diritti previsti dagli artt. 15-22 GDPR, tra cui:
-      </p>
-      <ul>
-        <li>accesso, rettifica, cancellazione;</li>
-        <li>limitazione del trattamento;</li>
-        <li>portabilità dei dati (quando applicabile);</li>
-        <li>opposizione al trattamento basato su legittimo interesse;</li>
-        <li>revoca del consenso (senza pregiudicare i trattamenti già effettuati);</li>
-        <li>reclamo all’Autorità di controllo (in Italia: Garante per la protezione dei dati personali).</li>
-      </ul>
-      <p>
-        Per esercitare i diritti, scrivi a: <span class="placeholder"><strong>DA COMPLETARE (email privacy)</strong></span>
-      </p>
-    </section>
-
-    <section class="card">
-      <h2>12) Cookie e tecnologie di tracciamento (questa pagina web)</h2>
-      <p>
-        Questa pagina è ospitata su GitHub Pages e può utilizzare log tecnici essenziali e funzionalità di rete/CDN.
-        Se utilizzi strumenti di analytics o cookie non essenziali su questa pagina, inserisci qui un banner/consenso e dettaglia i cookie.
-      </p>
-      <ul>
-        <li><strong>Analytics:</strong> <span class="placeholder"><strong>DA COMPLETARE (es. non usati / usati con consenso)</strong></span></li>
-        <li><strong>Cookie non essenziali:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
-      </ul>
-    </section>
-
-    <section class="card">
-      <h2>13) Modifiche alla presente informativa</h2>
-      <p>
-        Potremmo aggiornare questa informativa per riflettere modifiche al servizio o per obblighi normativi.
-        Pubblicheremo la versione aggiornata su questa pagina, indicando la data di ultima modifica.
-      </p>
-      <p><strong>Ultimo aggiornamento:</strong> <span class="placeholder"><strong>DA COMPLETARE (es. 12/02/2026)</strong></span></p>
-    </section>
-
-    <section class="card">
-      <h2>14) Contatti</h2>
-      <p>
-        Per domande o richieste sulla privacy:
-      </p>
-      <ul>
-        <li><strong>Email:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
-        <li><strong>Indirizzo:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
-      </ul>
-    </section>
-
-  </main>
-
-  <footer>
+  <section class="card">
+    <h2>2) DPO (Responsabile Protezione Dati)</h2>
     <p>
-      © <span id="year"></span> Tau • Privacy Policy
+      Al momento il Titolare <strong>non ha nominato un DPO</strong>. Se verrà nominato, i contatti saranno pubblicati in questa pagina.
     </p>
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
-  </footer>
+  </section>
+
+  <section class="card">
+    <h2>3) Dati trattati</h2>
+
+    <h3>3.1 Dati di registrazione (Firebase Authentication)</h3>
+    <ul>
+      <li><strong>Email</strong> (obbligatoria)</li>
+      <li><strong>Password</strong> (obbligatoria) — gestita da Firebase Auth e memorizzata in forma <strong>hashata</strong></li>
+    </ul>
+
+    <h3>3.2 Dati del profilo (Firestore: <code>profiles/{uid}</code>)</h3>
+    <ul>
+      <li><strong>Nome</strong> (obbligatorio)</li>
+      <li><strong>Data di nascita</strong> (obbligatoria)</li>
+      <li><strong>Età</strong> (obbligatoria, calcolata; accesso consentito solo a maggiorenni 18+)</li>
+      <li><strong>Genere</strong> (obbligatorio) e <strong>dettaglio genere</strong> se “Altro” (condizionale)</li>
+      <li><strong>Interessi</strong> (obbligatori)</li>
+      <li><strong>Intento</strong> (es. amicizia/relazione) (obbligatorio)</li>
+      <li><strong>Preferenze “cerco”</strong> (obbligatorie)</li>
+      <li><strong>Bio</strong> (facoltativa)</li>
+      <li><strong>Lavoro</strong> (facoltativo)</li>
+      <li><strong>Lista utenti bloccati</strong> (<code>profiles/{uid}.blocked</code>) per sicurezza dell’utente</li>
+    </ul>
+
+    <h3>3.3 Foto e immagini (Firebase Storage)</h3>
+    <ul>
+      <li><strong>Foto profilo</strong> (minimo 1, fino a 3) in <code>profile-images/{uid}/</code></li>
+      <li><strong>Immagini in chat</strong> in <code>chat-images/</code> (associate ai messaggi)</li>
+    </ul>
+
+    <h3>3.4 Geolocalizzazione (Firestore: <code>profiles/{uid}</code>)</h3>
+    <ul>
+      <li><strong>Coordinate GPS</strong> (<code>profiles/{uid}.location</code>) — <strong>arrotondate a ~1 km</strong> per privacy</li>
+      <li><strong>Città</strong> (<code>profiles/{uid}.city</code>) — ottenuta da reverse geocoding</li>
+      <li><strong>Timestamp aggiornamento posizione</strong> (<code>profiles/{uid}.locationUpdatedAt</code>)</li>
+    </ul>
+    <p class="muted">La geolocalizzazione è opzionale e dipende dai permessi concessi dall’utente.</p>
+
+    <h3>3.5 Comunicazioni e chat (Firestore)</h3>
+    <ul>
+      <li><strong>Chat dirette</strong>: <code>chats/{chatId}/messages/</code></li>
+      <li><strong>Gruppi</strong>: <code>groupRooms/{id}/messages/</code></li>
+      <li><strong>Live nei gruppi</strong>: <code>groupRooms/{id}/lives/{id}/messages/</code></li>
+      <li><strong>Thread privati in gruppo</strong>: <code>groupRooms/{id}/privateThreads/{id}/messages/</code></li>
+      <li><strong>Presenza online</strong>: <code>groupRooms/{id}/presence/</code></li>
+      <li><strong>Presenza live</strong>: <code>groupRooms/{id}/livePresence/</code></li>
+    </ul>
+
+    <h3>3.6 Moderazione e sicurezza (Firestore + servizi esterni)</h3>
+    <ul>
+      <li><strong>Segnalazioni utenti</strong>: <code>reports/</code></li>
+      <li><strong>Log audit</strong>: <code>auditLogs/</code></li>
+      <li><strong>Rate limiting</strong>: <code>rateLimits/</code> (protezione da abusi/DoS)</li>
+      <li><strong>Account eliminati</strong>: <code>deletedAccounts/</code> (solo metadata per compliance)</li>
+      <li><strong>Moderazione foto</strong>: stato <code>profiles/{uid}.photoMeta[].moderationStatus</code> (es. ok/flagged)</li>
+      <li><strong>Punteggi di sicurezza</strong> (es. adult/racy): usati internamente per prevenire contenuti espliciti</li>
+    </ul>
+
+    <h3>3.7 Dati tecnici locali</h3>
+    <ul>
+      <li><strong>Ultima attività</strong> memorizzata localmente (AsyncStorage) per gestione sessione e timeout (<strong>30 giorni</strong> di inattività)</li>
+    </ul>
+
+    <h3>3.8 Streaming video/audio (LiveKit)</h3>
+    <ul>
+      <li><strong>Stream audio/video</strong> gestito tramite LiveKit Cloud (transitorio, non registrato)</li>
+      <li><strong>Token di accesso</strong> alla stanza generato server-side (temporaneo)</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>4) Finalità del trattamento e basi giuridiche</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Finalità</th>
+          <th>Dati coinvolti (esempi)</th>
+          <th>Base giuridica</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Creazione account e gestione profilo</strong></td>
+          <td>Email, credenziali, nome, nascita/età, genere, interessi, intento, preferenze, foto profilo</td>
+          <td>Esecuzione del contratto/servizio (art. 6(1)(b) GDPR)</td>
+        </tr>
+        <tr>
+          <td><strong>Funzionalità social: chat, gruppi, live</strong></td>
+          <td>Messaggi, presenza, contenuti condivisi, token live, stream A/V</td>
+          <td>Esecuzione del contratto/servizio (art. 6(1)(b))</td>
+        </tr>
+        <tr>
+          <td><strong>Geolocalizzazione per mostrare utenti in zona</strong></td>
+          <td>Coordinate arrotondate (~1 km), città</td>
+          <td>Consenso (art. 6(1)(a)) tramite permessi dispositivo/app</td>
+        </tr>
+        <tr>
+          <td><strong>Moderazione contenuti e prevenzione abusi</strong></td>
+          <td>Foto (analisi nudità), punteggi sicurezza, segnalazioni, blocchi</td>
+          <td>Legittimo interesse alla sicurezza della piattaforma e degli utenti (art. 6(1)(f)); in alcuni casi obblighi legali (art. 6(1)(c))</td>
+        </tr>
+        <tr>
+          <td><strong>Sicurezza, audit e compliance</strong></td>
+          <td>Audit logs, rate limits, metadata account eliminati</td>
+          <td>Legittimo interesse (art. 6(1)(f)) e/o obbligo legale (art. 6(1)(c))</td>
+        </tr>
+        <tr>
+          <td><strong>Assistenza e gestione richieste</strong></td>
+          <td>Dati forniti in supporto/contatti, segnalazioni</td>
+          <td>Esecuzione del contratto (art. 6(1)(b)) e/o legittimo interesse (art. 6(1)(f))</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="card">
+    <h2>5) Consensi richiesti</h2>
+    <ul>
+      <li><strong>Conferma maggiore età (18+)</strong> in registrazione</li>
+      <li><strong>Accettazione Privacy Policy</strong> durante setup profilo</li>
+      <li><strong>Accettazione regole community</strong> durante setup profilo</li>
+      <li><strong>Permesso geolocalizzazione</strong> (opzionale) durante setup profilo / impostazioni dispositivo</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>6) Conservazione (retention)</h2>
+    <ul>
+      <li><strong>Account e profilo:</strong> finché l’account è attivo; cancellati su richiesta di eliminazione account (salvo eccezioni sotto).</li>
+      <li><strong>Chat dirette:</strong> <code>chats/{chatId}/messages/</code> conservati fino a cancellazione account (o rimozione secondo funzionalità disponibili).</li>
+      <li><strong>Messaggi gruppi:</strong> <code>groupRooms/{id}/messages/</code> eliminati quando il gruppo è inattivo (<strong>24 ore</strong>).</li>
+      <li><strong>Messaggi live:</strong> <code>groupRooms/{id}/lives/{id}/messages/</code> eliminati a <strong>fine live</strong>.</li>
+      <li><strong>Thread privati in gruppo:</strong> eliminati con il gruppo.</li>
+      <li><strong>Immagini chat:</strong> conservate fino a cancellazione del messaggio associato o dell’account.</li>
+      <li><strong>Report/abusi:</strong> conservati per il tempo necessario a gestire la segnalazione e per eventuale tutela/azioni di sicurezza.</li>
+      <li><strong>Audit logs e rate limits:</strong> conservati per un periodo ragionevole legato a sicurezza e compliance:
+        <span class="placeholder"><strong>DA COMPLETARE (es. 6–12 mesi)</strong></span>
+      </li>
+      <li><strong>deletedAccounts (metadata):</strong> conservati per finalità di compliance GDPR e prevenzione abusi, limitando i dati al minimo necessario.</li>
+      <li><strong>Dati locali (AsyncStorage - ultima attività):</strong> timeout sessione dopo <strong>30 giorni</strong> di inattività.</li>
+      <li><strong>Streaming LiveKit:</strong> transitorio, non registrato (salvo cambi futuri che verranno comunicati).</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>7) Destinatari e fornitori (Responsabili/Sub-responsabili)</h2>
+    <p>
+      Per erogare Tau utilizziamo fornitori tecnici che possono trattare dati per nostro conto come <strong>Responsabili del trattamento</strong> (art. 28 GDPR) o,
+      in alcuni casi, come <strong>Titolari autonomi</strong>.
+    </p>
+
+    <h3>7.1 Google/Firebase (Google Cloud / Firebase)</h3>
+    <ul>
+      <li><strong>Firebase Authentication</strong> (gestione account e credenziali)</li>
+      <li><strong>Firestore Database</strong> (profili, chat, gruppi, presenze, report, audit, rate limits)</li>
+      <li><strong>Firebase Storage</strong> (foto profilo e immagini chat)</li>
+    </ul>
+
+    <h3>7.2 Google Cloud Vision API (moderazione immagini)</h3>
+    <ul>
+      <li>Analisi automatizzata delle immagini (es. nudità/contenuti espliciti) per sicurezza della community.</li>
+    </ul>
+
+    <h3>7.3 LiveKit Cloud (streaming)</h3>
+    <ul>
+      <li>Gestione tecnica dello stream audio/video in tempo reale (non registrato) e infrastruttura delle room live.</li>
+    </ul>
+
+    <p class="muted">
+      Su richiesta, puoi ottenere maggiori dettagli sui fornitori effettivamente utilizzati e sui relativi ruoli privacy.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>8) Trasferimenti fuori dallo SEE</h2>
+    <p>
+      Alcuni fornitori possono trattare dati anche al di fuori dello Spazio Economico Europeo (SEE).
+      In tal caso, il trasferimento avviene nel rispetto degli artt. 44 e seguenti GDPR (es. decisioni di adeguatezza, Clausole Contrattuali Standard, misure supplementari).
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>9) Moderazione automatica e “matching”</h2>
+    <p>
+      Tau utilizza:
+    </p>
+    <ul>
+      <li><strong>Moderazione automatica immagini</strong> (Vision API) per rilevare e limitare contenuti espliciti.</li>
+      <li><strong>Logiche di suggerimento/matching</strong> basate su preferenze e parametri del profilo (es. interessi, intento, preferenze, posizione arrotondata).</li>
+    </ul>
+    <p class="muted">
+      Queste attività, di norma, non producono effetti giuridici sull’utente ai sensi dell’art. 22 GDPR.
+      Se in futuro verranno introdotte decisioni automatizzate con effetti significativi, aggiorneremo l’informativa.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>10) Sicurezza</h2>
+    <p>Misure implementate (in base al progetto):</p>
+    <ul>
+      <li>Password gestite da Firebase Auth (hashate)</li>
+      <li>Coordinate GPS arrotondate (~1 km)</li>
+      <li>Rate limiting su API</li>
+      <li>Ri-autenticazione per eliminazione account</li>
+      <li>Timeout sessione dopo 30 giorni di inattività</li>
+      <li>Protezione screenshot “best-effort” (dove supportata)</li>
+      <li>Moderazione automatica delle immagini</li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>11) Minori</h2>
+    <p>
+      Tau è destinata esclusivamente a utenti <strong>maggiorenni (18+)</strong>.
+      Se ritieni che un minore abbia fornito dati personali, contattaci per la rimozione.
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>12) Diritti dell’utente (GDPR)</h2>
+    <p>Puoi esercitare i diritti previsti dagli artt. 15–22 GDPR, tra cui:</p>
+    <ul>
+      <li><strong>Accesso</strong> (dati visibili nel profilo)</li>
+      <li><strong>Rettifica</strong> (modifica profilo in-app)</li>
+      <li><strong>Cancellazione</strong> (funzione “Elimina account” — cancella i dati, salvo metadata minimi in <code>deletedAccounts</code> per compliance/sicurezza)</li>
+      <li><strong>Portabilità</strong> <span class="pill">da implementare</span> (export dati)</li>
+      <li><strong>Opposizione</strong> e limitazione (quando applicabile)</li>
+      <li><strong>Revoca del consenso</strong> (es. geolocalizzazione) in qualsiasi momento dalle impostazioni</li>
+      <li><strong>Reclamo</strong> al Garante per la protezione dei dati personali</li>
+    </ul>
+    <p>
+      Per esercitare i diritti: <span class="placeholder"><strong>DA COMPLETARE (email privacy)</strong></span>
+    </p>
+  </section>
+
+  <section class="card">
+    <h2>13) Cookie e log (questa pagina web)</h2>
+    <p>
+      Questa pagina è ospitata su GitHub Pages e può generare log tecnici essenziali (es. richieste HTTP) necessari al funzionamento.
+      Tau non usa cookie di profilazione su questa pagina salvo future integrazioni.
+    </p>
+    <ul>
+      <li><strong>Analytics:</strong> <span class="placeholder"><strong>DA COMPLETARE (es. non usati / usati con consenso)</strong></span></li>
+    </ul>
+  </section>
+
+  <section class="card">
+    <h2>14) Modifiche all’informativa</h2>
+    <p>
+      Potremmo aggiornare questa informativa per riflettere modifiche al servizio o per obblighi normativi.
+      Pubblicheremo la versione aggiornata su questa pagina indicando la data.
+    </p>
+    <p><strong>Ultimo aggiornamento:</strong> <span class="placeholder"><strong>DA COMPLETARE (es. 12/02/2026)</strong></span></p>
+  </section>
+
+  <section class="card">
+    <h2>15) Contatti</h2>
+    <ul>
+      <li><strong>Email:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
+      <li><strong>Indirizzo:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <p>© <span id="year"></span> Tau • Privacy Policy</p>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</footer>
 </body>
 </html>
