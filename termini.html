@@ -1,257 +1,473 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Termini e Condizioni - Tau</title>
-  <meta name="description" content="Termini e Condizioni d'Uso dell'app Tau." />
-  <style>
-    :root{
-      --bg:#0b0f17; --card:#111827; --text:#e5e7eb; --muted:#9ca3af;
-      --accent:#22c55e; --border:#1f2937; --warnbg:#fff7ed; --warn:#9a3412;
-      --pill:#0b1220;
-    }
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:linear-gradient(180deg,var(--bg),#070a10);color:var(--text);line-height:1.6}
-    header{padding:48px 16px 16px;max-width:980px;margin:0 auto}
-    h1{margin:0 0 8px;font-size:34px;letter-spacing:-0.02em}
-    .sub{color:var(--muted);margin:0 0 20px}
-    main{max-width:980px;margin:0 auto;padding:0 16px 48px}
-    .card{background:rgba(17,24,39,.88);border:1px solid var(--border);border-radius:16px;padding:18px 18px;margin:14px 0;box-shadow:0 10px 25px rgba(0,0,0,.25)}
-    h2{margin:0 0 8px;font-size:20px}
-    h3{margin:16px 0 8px;font-size:16px;color:#d1d5db}
-    ul{margin:8px 0 0 18px}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .muted{color:var(--muted)}
-    .badge{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:12px;background:rgba(11,18,32,.55)}
-    .placeholder{
-      display:inline-block;
-      background:rgba(34,197,94,.12);
-      border:1px dashed rgba(34,197,94,.55);
-      padding:2px 8px;border-radius:10px
-    }
-    .warning{
-      background:var(--warnbg);
-      color:#111827;
-      border:1px solid #fed7aa;
-      border-radius:16px;
-      padding:14px 14px;
-    }
-    .warning strong{color:var(--warn)}
-    code{background:var(--pill);border:1px solid #1f2a44;padding:2px 6px;border-radius:8px;color:#e5e7eb}
-    .pill{display:inline-block;padding:2px 10px;border:1px solid var(--border);border-radius:999px;background:rgba(11,18,32,.55);color:var(--muted);font-size:12px}
-    footer{max-width:980px;margin:0 auto;padding:0 16px 28px;color:var(--muted);font-size:14px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termini e Condizioni - Tau</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --text: #1f2937;
+            --muted: #6b7280;
+            --bg: #ffffff;
+            --card-bg: #f9fafb;
+            --border: #e5e7eb;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--text);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 16px;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        p, li {
+            font-size: 15px;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+        ul, ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            background: #fef3c7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #92400e;
+        }
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            margin: 16px 0;
+        }
+        .warning {
+            background: #fef2f2;
+            border-color: #fecaca;
+        }
+        .warning p {
+            color: #991b1b;
+        }
+        .update-date {
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 24px;
+        }
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid var(--border);
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background: var(--card-bg);
+            font-weight: 600;
+            color: var(--text);
+        }
+    </style>
 </head>
-
 <body>
-<header>
-  <div class="badge">Termini e Condizioni • Tau</div>
-  <h1>Termini e Condizioni d’Uso</h1>
-  <p class="sub">Leggi attentamente questi Termini prima di utilizzare l’app Tau.</p>
+    <h1>Termini e Condizioni di Utilizzo</h1>
+    <p class="update-date">Ultimo aggiornamento: <span class="highlight">[DA COMPLETARE - DATA]</span></p>
 
-  <div class="warning">
-    <strong>Campi da completare:</strong>
-    i dati legali del gestore (es. P.IVA) non sono ancora disponibili. Sono evidenziati così:
-    <span class="placeholder"><strong>DA COMPLETARE</strong></span>.
-  </div>
-</header>
+    <div class="card">
+        <p><strong>Titolare del Servizio:</strong></p>
+        <p>
+            <span class="highlight">[DA COMPLETARE - NOME/RAGIONE SOCIALE]</span><br>
+            Sede: <span class="highlight">[DA COMPLETARE - INDIRIZZO]</span><br>
+            P.IVA/C.F.: <span class="highlight">[DA COMPLETARE - P.IVA O CODICE FISCALE]</span><br>
+            Email: <span class="highlight">[DA COMPLETARE - EMAIL]</span>
+        </p>
+    </div>
 
-<main>
-
-  <section class="card">
-    <h2>1) Chi siamo</h2>
-    <p>Il servizio “Tau” (l’“App”) è gestito da:</p>
-    <ul>
-      <li><strong>Denominazione/Nome:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
-      <li><strong>Indirizzo:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
-      <li><strong>P.IVA / Cod. Fiscale:</strong> <span class="placeholder"><strong>DA COMPLETARE (P.IVA non ancora disponibile)</strong></span></li>
-      <li><strong>Email contatto:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>2) Definizioni</h2>
-    <ul>
-      <li><strong>Utente</strong>: chiunque utilizzi Tau.</li>
-      <li><strong>Contenuti</strong>: informazioni, testi, foto, messaggi, audio/video, e qualsiasi materiale pubblicato o inviato tramite Tau.</li>
-      <li><strong>Account</strong>: profilo personale creato dall’Utente per accedere all’App.</li>
-      <li><strong>Live</strong>: sessione di streaming audio/video in tempo reale (non registrata salvo diversa indicazione futura).</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>3) Accettazione dei Termini</h2>
+    <h2>1. Accettazione dei Termini</h2>
     <p>
-      Utilizzando Tau dichiari di aver letto e accettato questi Termini e reminder/linee guida della community (se presenti).
-      Se non accetti, non utilizzare l’App.
+        I presenti Termini e Condizioni ("Termini") regolano l'utilizzo dell'applicazione mobile 
+        <strong>Tau</strong> ("App", "Servizio"), una piattaforma di incontri e socializzazione.
     </p>
-  </section>
-
-  <section class="card">
-    <h2>4) Requisiti: solo maggiorenni</h2>
     <p>
-      Tau è riservata a utenti <strong>maggiorenni (18+)</strong>. Durante la registrazione dichiari di avere almeno 18 anni.
-      Se rileviamo o riceviamo segnalazioni affidabili che un account appartenga a un minore, potremo sospendere o eliminare l’account.
+        Accedendo o utilizzando l'App, l'utente ("Utente", "tu") accetta integralmente i presenti Termini. 
+        Se non accetti questi Termini, non puoi utilizzare il Servizio.
     </p>
-  </section>
-
-  <section class="card">
-    <h2>5) Descrizione del servizio</h2>
-    <p>Tau permette di:</p>
-    <ul>
-      <li>creare un profilo (nome, età, interessi, intento, foto);</li>
-      <li>interagire con altri utenti (match/visualizzazione profili);</li>
-      <li>scambiare messaggi in chat dirette;</li>
-      <li>partecipare a gruppi e relative chat;</li>
-      <li>partecipare a live con streaming audio/video tramite provider terzo.</li>
-    </ul>
-    <p class="muted">
-      Alcune funzionalità possono dipendere da permessi del dispositivo (es. geolocalizzazione) e potrebbero variare nel tempo.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>6) Account, credenziali e responsabilità</h2>
-    <ul>
-      <li>Sei responsabile della riservatezza delle credenziali e dell’uso del tuo account.</li>
-      <li>Devi fornire informazioni veritiere e mantenere aggiornati i dati del profilo.</li>
-      <li>Non puoi creare account per conto di terzi senza autorizzazione né impersonare altre persone.</li>
-      <li>Puoi eliminare l’account tramite la funzione “Elimina account” (può richiedere ri-autenticazione).</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>7) Regole della community (condotta vietata)</h2>
-    <p>È vietato usare Tau per:</p>
-    <ul>
-      <li><strong>contenuti sessualmente espliciti o nudità</strong> ove non consentiti dalle regole dell’App;</li>
-      <li>molestie, stalking, minacce, incitamento all’odio, discriminazione;</li>
-      <li>pubblicare o inviare contenuti illegali, violenti, o che sfruttino minori;</li>
-      <li>spam, truffe, phishing, promozione ingannevole, link malevoli;</li>
-      <li>condivisione di dati personali sensibili di terzi senza consenso (doxxing);</li>
-      <li>attività che violino diritti di proprietà intellettuale o privacy;</li>
-      <li>tentare di aggirare sistemi di sicurezza, rate limit, o moderazione;</li>
-      <li>utilizzare bot, scraping, automazioni non autorizzate.</li>
-    </ul>
-    <p class="muted">
-      Tau implementa strumenti di sicurezza e potrebbe limitare richieste e comportamenti anomali (rate limiting).
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>8) Contenuti degli utenti e licenza</h2>
     <p>
-      Tu mantieni i diritti sui Contenuti che pubblichi. Tuttavia, per far funzionare Tau, concedi al gestore una licenza
-      <strong>non esclusiva</strong>, <strong>mondiale</strong>, <strong>gratuita</strong> e <strong>limitata alla durata di pubblicazione e alle finalità del servizio</strong>
-      per ospitare, memorizzare, riprodurre, visualizzare e distribuire tecnicamente i tuoi Contenuti all’interno dell’App
-      (es. mostrare foto profilo ad altri utenti, recapitare messaggi).
+        L'utilizzo del Servizio è inoltre soggetto alla nostra 
+        <a href="privacy-policy.html">Privacy Policy</a>, che descrive come raccogliamo e trattiamo i tuoi dati personali.
     </p>
-    <p class="muted">
-      La licenza termina quando rimuovi i Contenuti o elimini l’account, salvo conservazioni necessarie per sicurezza, conformità o risoluzione controversie.
-    </p>
-  </section>
 
-  <section class="card">
-    <h2>9) Moderazione e segnalazioni</h2>
-    <p>
-      Per mantenere Tau sicura, possiamo applicare moderazione:
-    </p>
+    <h2>2. Requisiti di Età e Idoneità</h2>
+    
+    <div class="card warning">
+        <p><strong>IMPORTANTE:</strong> L'App è riservata esclusivamente a persone maggiorenni (18 anni o più). 
+        Registrandoti, dichiari e garantisci di avere almeno 18 anni di età.</p>
+    </div>
+
+    <p>Per utilizzare l'App, devi:</p>
     <ul>
-      <li><strong>Automatica</strong>: analisi delle immagini per rilevare contenuti espliciti (es. nudità) tramite servizi terzi.</li>
-      <li><strong>Manuale</strong>: revisione di segnalazioni e interventi su contenuti/utenti.</li>
+        <li>Avere almeno <strong>18 anni</strong> di età</li>
+        <li>Avere la capacità legale di stipulare un contratto vincolante</li>
+        <li>Non essere stato precedentemente sospeso o rimosso dal Servizio</li>
+        <li>Non avere condanne per reati sessuali, violenti o di stalking</li>
+        <li>Rispettare tutte le leggi applicabili nel tuo paese di residenza</li>
     </ul>
     <p>
-      Puoi segnalare contenuti o utenti tramite le funzioni in-app. Potremmo adottare misure come:
-      <span class="pill">rimozione contenuti</span> <span class="pill">limitazioni</span> <span class="pill">sospensione</span> <span class="pill">ban</span>.
+        Ci riserviamo il diritto di richiedere prova dell'età in qualsiasi momento e di sospendere 
+        o terminare account che risultino appartenere a minori.
     </p>
-    <p class="muted">
-      Non garantiamo la rimozione immediata di qualsiasi contenuto, ma ci impegniamo a intervenire in tempi ragionevoli in base alla gravità e al volume delle segnalazioni.
-    </p>
-  </section>
 
-  <section class="card">
-    <h2>10) Live e streaming (LiveKit)</h2>
+    <h2>3. Registrazione e Account</h2>
+    
+    <h3>3.1 Creazione dell'Account</h3>
+    <p>Per utilizzare l'App è necessario creare un account fornendo:</p>
     <ul>
-      <li>Le Live utilizzano un provider terzo per lo streaming audio/video.</li>
-      <li>Lo streaming è <strong>transitorio</strong> e <strong>non registrato</strong> (salvo future modifiche che verranno comunicate).</li>
-      <li>Durante le Live valgono le stesse regole di condotta: niente contenuti illegali, molestie, nudità dove non consentita, ecc.</li>
-      <li>Potremmo interrompere una Live o limitare accesso in caso di violazioni o rischi di sicurezza.</li>
+        <li>Indirizzo email valido</li>
+        <li>Password sicura</li>
+        <li>Nome (come vuoi essere chiamato)</li>
+        <li>Data di nascita (per verifica età 18+)</li>
+        <li>Genere</li>
+        <li>Almeno una foto profilo</li>
+        <li>Interessi e preferenze</li>
     </ul>
-  </section>
 
-  <section class="card">
-    <h2>11) Blocco utenti</h2>
+    <h3>3.2 Veridicità delle Informazioni</h3>
     <p>
-      Tau consente di bloccare altri utenti. Il blocco serve a migliorare la sicurezza e l’esperienza:
-      può impedire contatti, messaggi o interazioni (in base alle funzionalità disponibili).
+        Ti impegni a fornire informazioni <strong>veritiere, accurate e aggiornate</strong>. 
+        È vietato:
     </p>
-  </section>
-
-  <section class="card">
-    <h2>12) Disponibilità del servizio e modifiche</h2>
-    <p>
-      Tau può essere aggiornata, modificata, sospesa o interrotta (in tutto o in parte) per motivi tecnici, di sicurezza o evoluzione del prodotto.
-      Ci impegniamo a ridurre le interruzioni, ma non possiamo garantire disponibilità continua.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>13) Limitazione di responsabilità</h2>
     <ul>
-      <li>Tau è una piattaforma che facilita interazioni tra utenti: <strong>non controlliamo né garantiamo</strong> identità, intenzioni o comportamenti degli utenti.</li>
-      <li>Usa cautela quando interagisci con altri utenti; incontri dal vivo sono a tuo rischio.</li>
-      <li>Nei limiti consentiti dalla legge, il gestore non è responsabile per danni indiretti o conseguenze derivanti da uso improprio dell’App o da comportamenti di terzi.</li>
+        <li>Creare profili falsi o ingannevoli</li>
+        <li>Usare foto di altre persone senza autorizzazione</li>
+        <li>Mentire sulla propria età, identità o stato civile</li>
+        <li>Creare più di un account</li>
     </ul>
-    <p class="muted">
-      Nulla in questi Termini limita diritti inderogabili del consumatore o responsabilità che non possono essere escluse per legge.
-    </p>
-  </section>
 
-  <section class="card">
-    <h2>14) Sospensione e chiusura dell’account</h2>
-    <p>Possiamo sospendere o chiudere un account, anche senza preavviso, se:</p>
+    <h3>3.3 Sicurezza dell'Account</h3>
+    <p>
+        Sei responsabile della riservatezza delle tue credenziali di accesso. 
+        Devi notificarci immediatamente qualsiasi uso non autorizzato del tuo account 
+        scrivendo a <span class="highlight">[DA COMPLETARE - EMAIL SUPPORTO]</span>.
+    </p>
+
+    <h2>4. Utilizzo del Servizio</h2>
+
+    <h3>4.1 Funzionalità Principali</h3>
+    <p>L'App offre le seguenti funzionalità:</p>
     <ul>
-      <li>viola questi Termini o le regole della community;</li>
-      <li>è coinvolto in attività illegali, abusive o pericolose;</li>
-      <li>tenta di compromettere sicurezza o funzionamento del servizio (es. bypass rate limit).</li>
+        <li><strong>Profilo personale:</strong> Creazione e gestione del proprio profilo con foto, bio e interessi</li>
+        <li><strong>Discovery:</strong> Visualizzazione di profili di altri utenti nelle vicinanze</li>
+        <li><strong>Messaggistica:</strong> Chat private tra utenti</li>
+        <li><strong>Gruppi:</strong> Stanze di chat di gruppo tematiche</li>
+        <li><strong>Live streaming:</strong> Trasmissioni video in diretta nei gruppi</li>
+        <li><strong>Chat private nei gruppi:</strong> Conversazioni 1-to-1 all'interno dei gruppi</li>
     </ul>
-    <p>
-      L’utente può eliminare l’account in qualsiasi momento tramite la funzione dedicata.
-    </p>
-  </section>
 
-  <section class="card">
-    <h2>15) Privacy</h2>
+    <h3>4.2 Geolocalizzazione</h3>
     <p>
-      Il trattamento dei dati personali è disciplinato dalla <strong>Privacy Policy</strong> di Tau, parte integrante di questi Termini.
-      <br/>
-      <strong>Link Privacy Policy:</strong> <span class="placeholder"><strong>DA COMPLETARE (URL)</strong></span>
+        L'App utilizza la tua posizione geografica per mostrarti utenti nelle vicinanze. 
+        Per proteggere la tua privacy, le coordinate vengono <strong>arrotondate a circa 1 km</strong> 
+        di precisione prima di essere salvate.
     </p>
-  </section>
-
-  <section class="card">
-    <h2>16) Legge applicabile e foro competente</h2>
     <p>
-      Questi Termini sono regolati dalla legge italiana.
-      Per le controversie, il foro competente sarà quello previsto dalla normativa applicabile (inclusa disciplina consumatori, se pertinente).
+        La geolocalizzazione è opzionale ma necessaria per alcune funzionalità. 
+        Puoi revocare il consenso in qualsiasi momento dalle impostazioni del tuo dispositivo.
     </p>
-  </section>
 
-  <section class="card">
-    <h2>17) Contatti</h2>
+    <h3>4.3 Live Streaming</h3>
+    <p>
+        La funzione di live streaming permette di trasmettere video in tempo reale all'interno dei gruppi. 
+        Utilizzando questa funzione:
+    </p>
     <ul>
-      <li><strong>Email:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
-      <li><strong>Indirizzo:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
+        <li>Acconsenti alla trasmissione della tua immagine e voce</li>
+        <li>Ti impegni a non trasmettere contenuti vietati (vedi Sezione 5)</li>
+        <li>Accetti che altri utenti possano visualizzare la tua trasmissione</li>
     </ul>
-    <p><strong>Ultimo aggiornamento:</strong> <span class="placeholder"><strong>DA COMPLETARE (es. 12/02/2026)</strong></span></p>
-  </section>
+    <p>Le trasmissioni live <strong>non vengono registrate</strong> e sono disponibili solo in tempo reale.</p>
 
-</main>
+    <h2>5. Comportamenti Vietati</h2>
 
-<footer>
-  <p>© <span id="year"></span> Tau • Termini e Condizioni</p>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</footer>
+    <div class="card warning">
+        <p><strong>La violazione di queste regole comporta la sospensione o eliminazione immediata dell'account.</strong></p>
+    </div>
+
+    <h3>5.1 Contenuti Vietati</h3>
+    <p>È severamente vietato pubblicare, condividere o trasmettere:</p>
+    <ul>
+        <li>Contenuti sessualmente espliciti o pornografici</li>
+        <li>Nudità non consensuale o "revenge porn"</li>
+        <li>Contenuti che coinvolgono minori</li>
+        <li>Contenuti violenti, cruenti o che incitano alla violenza</li>
+        <li>Contenuti che promuovono odio, discriminazione o razzismo</li>
+        <li>Contenuti diffamatori, calunniosi o molesti</li>
+        <li>Spam, pubblicità non autorizzata o contenuti commerciali</li>
+        <li>Malware, virus o link dannosi</li>
+        <li>Contenuti protetti da copyright senza autorizzazione</li>
+    </ul>
+
+    <h3>5.2 Comportamenti Vietati</h3>
+    <p>È vietato:</p>
+    <ul>
+        <li>Molestare, minacciare o intimidire altri utenti</li>
+        <li>Stalking online o offline</li>
+        <li>Richiedere denaro o informazioni finanziarie</li>
+        <li>Promuovere attività illegali</li>
+        <li>Impersonare altre persone o entità</li>
+        <li>Utilizzare bot, script o strumenti automatizzati</li>
+        <li>Tentare di accedere ad account altrui</li>
+        <li>Eludere le misure di sicurezza o moderazione</li>
+        <li>Raccogliere dati di altri utenti senza consenso</li>
+        <li>Utilizzare l'App per scopi diversi da quelli previsti</li>
+    </ul>
+
+    <h3>5.3 Moderazione dei Contenuti</h3>
+    <p>
+        Per garantire la sicurezza della community, utilizziamo sistemi automatizzati di moderazione 
+        basati su intelligenza artificiale (Google Cloud Vision API) per analizzare le immagini 
+        caricate e rilevare contenuti potenzialmente inappropriati.
+    </p>
+    <p>
+        Ci riserviamo il diritto di rimuovere qualsiasi contenuto e di sospendere o eliminare 
+        account che violino questi Termini, a nostra esclusiva discrezione.
+    </p>
+
+    <h2>6. Segnalazioni e Blocco Utenti</h2>
+
+    <h3>6.1 Segnalazione di Violazioni</h3>
+    <p>
+        Se riscontri comportamenti o contenuti che violano questi Termini, puoi segnalarli 
+        direttamente dall'App. Esamineremo ogni segnalazione e prenderemo le misure appropriate.
+    </p>
+    <p>Motivi di segnalazione disponibili:</p>
+    <ul>
+        <li>Spam</li>
+        <li>Molestie</li>
+        <li>Contenuto inappropriato</li>
+        <li>Profilo falso</li>
+        <li>Utente minorenne</li>
+        <li>Altro</li>
+    </ul>
+
+    <h3>6.2 Blocco Utenti</h3>
+    <p>
+        Puoi bloccare qualsiasi utente in qualsiasi momento. Un utente bloccato non potrà 
+        più contattarti o visualizzare il tuo profilo.
+    </p>
+
+    <h2>7. Contenuti dell'Utente</h2>
+
+    <h3>7.1 Proprietà dei Contenuti</h3>
+    <p>
+        Mantieni la proprietà di tutti i contenuti che carichi sull'App (foto, messaggi, bio, ecc.). 
+        Tuttavia, caricando contenuti, ci concedi una licenza mondiale, non esclusiva, 
+        trasferibile, sublicenziabile e royalty-free per utilizzare, riprodurre, modificare e 
+        visualizzare tali contenuti al fine di fornire e migliorare il Servizio.
+    </p>
+
+    <h3>7.2 Responsabilità per i Contenuti</h3>
+    <p>
+        Sei l'unico responsabile dei contenuti che pubblichi. Dichiari e garantisci di avere 
+        tutti i diritti necessari per pubblicare tali contenuti e che questi non violano 
+        diritti di terzi o leggi applicabili.
+    </p>
+
+    <h2>8. Privacy e Protezione dei Dati</h2>
+    <p>
+        La raccolta e il trattamento dei tuoi dati personali sono regolati dalla nostra 
+        <a href="privacy-policy.html">Privacy Policy</a>. Utilizzando l'App, accetti le 
+        pratiche descritte nella Privacy Policy.
+    </p>
+    <p>In sintesi:</p>
+    <ul>
+        <li>Raccogliamo solo i dati necessari al funzionamento del Servizio</li>
+        <li>Le coordinate GPS vengono arrotondate per proteggere la tua privacy</li>
+        <li>Puoi richiedere la cancellazione completa del tuo account e dei tuoi dati in qualsiasi momento</li>
+        <li>Non vendiamo i tuoi dati a terzi</li>
+    </ul>
+
+    <h2>9. Sospensione e Terminazione</h2>
+
+    <h3>9.1 Terminazione da Parte Tua</h3>
+    <p>
+        Puoi eliminare il tuo account in qualsiasi momento dalle impostazioni dell'App. 
+        L'eliminazione comporta la cancellazione permanente di:
+    </p>
+    <ul>
+        <li>Il tuo profilo e tutte le informazioni associate</li>
+        <li>Tutte le tue foto</li>
+        <li>Tutti i tuoi messaggi e conversazioni</li>
+        <li>I tuoi dati di presenza nei gruppi</li>
+    </ul>
+    <p>Questa operazione è <strong>irreversibile</strong>.</p>
+
+    <h3>9.2 Sospensione o Terminazione da Parte Nostra</h3>
+    <p>Possiamo sospendere o terminare il tuo account, con o senza preavviso, se:</p>
+    <ul>
+        <li>Violi questi Termini o le nostre policy</li>
+        <li>Il tuo comportamento danneggia altri utenti o il Servizio</li>
+        <li>Siamo obbligati per legge</li>
+        <li>L'account risulta inattivo per un periodo prolungato</li>
+    </ul>
+
+    <h2>10. Limitazione di Responsabilità</h2>
+
+    <div class="card">
+        <p><strong>IMPORTANTE - LEGGI ATTENTAMENTE</strong></p>
+    </div>
+
+    <h3>10.1 Servizio "Così Com'è"</h3>
+    <p>
+        Il Servizio viene fornito "così com'è" e "come disponibile", senza garanzie di alcun tipo, 
+        espresse o implicite, incluse garanzie di commerciabilità, idoneità per uno scopo particolare 
+        o non violazione.
+    </p>
+
+    <h3>10.2 Interazioni tra Utenti</h3>
+    <p>
+        <strong>Non siamo responsabili per il comportamento degli utenti</strong>, sia online che offline. 
+        Non effettuiamo verifiche dei precedenti penali o dell'identità degli utenti 
+        (oltre alla verifica dell'età).
+    </p>
+    <p>
+        Ti invitiamo a usare cautela nelle interazioni con altri utenti e a segnalare 
+        qualsiasi comportamento sospetto. Per gli incontri di persona, consigliamo di:
+    </p>
+    <ul>
+        <li>Incontrare sempre in luoghi pubblici</li>
+        <li>Informare amici o familiari dei tuoi spostamenti</li>
+        <li>Non condividere informazioni personali sensibili (indirizzo, dati finanziari)</li>
+        <li>Fidarsi del proprio istinto</li>
+    </ul>
+
+    <h3>10.3 Esclusione di Responsabilità</h3>
+    <p>
+        Nei limiti consentiti dalla legge, non saremo responsabili per danni indiretti, incidentali, 
+        speciali, consequenziali o punitivi, inclusi perdita di profitti, dati, uso o altre perdite 
+        intangibili derivanti da:
+    </p>
+    <ul>
+        <li>L'uso o l'impossibilità di usare il Servizio</li>
+        <li>Comportamenti o contenuti di altri utenti</li>
+        <li>Accesso non autorizzato al tuo account</li>
+        <li>Interruzioni o errori del Servizio</li>
+    </ul>
+
+    <h2>11. Indennizzo</h2>
+    <p>
+        Accetti di indennizzare e manlevare <span class="highlight">[DA COMPLETARE - NOME]</span>, 
+        i suoi dirigenti, dipendenti e agenti da qualsiasi reclamo, danno, perdita, responsabilità, 
+        costo e spesa (incluse le spese legali) derivanti da:
+    </p>
+    <ul>
+        <li>Il tuo utilizzo del Servizio</li>
+        <li>La violazione di questi Termini</li>
+        <li>La violazione di diritti di terzi</li>
+        <li>I contenuti da te pubblicati</li>
+    </ul>
+
+    <h2>12. Modifiche ai Termini</h2>
+    <p>
+        Ci riserviamo il diritto di modificare questi Termini in qualsiasi momento. 
+        In caso di modifiche sostanziali, ti avviseremo tramite:
+    </p>
+    <ul>
+        <li>Notifica push nell'App</li>
+        <li>Email all'indirizzo registrato</li>
+        <li>Avviso visibile nell'App</li>
+    </ul>
+    <p>
+        L'uso continuato del Servizio dopo la pubblicazione delle modifiche costituisce 
+        accettazione dei nuovi Termini.
+    </p>
+
+    <h2>13. Disposizioni Generali</h2>
+
+    <h3>13.1 Intero Accordo</h3>
+    <p>
+        Questi Termini, insieme alla Privacy Policy, costituiscono l'intero accordo tra te e 
+        <span class="highlight">[DA COMPLETARE - NOME]</span> relativamente all'utilizzo del Servizio.
+    </p>
+
+    <h3>13.2 Separabilità</h3>
+    <p>
+        Se una disposizione di questi Termini viene ritenuta non valida o inapplicabile, 
+        le restanti disposizioni rimarranno pienamente in vigore.
+    </p>
+
+    <h3>13.3 Rinuncia</h3>
+    <p>
+        La mancata applicazione di un diritto o di una disposizione di questi Termini 
+        non costituisce rinuncia a tale diritto o disposizione.
+    </p>
+
+    <h3>13.4 Cessione</h3>
+    <p>
+        Non puoi cedere o trasferire questi Termini senza il nostro previo consenso scritto. 
+        Possiamo cedere i nostri diritti e obblighi senza restrizioni.
+    </p>
+
+    <h2>14. Legge Applicabile e Foro Competente</h2>
+    <p>
+        I presenti Termini sono regolati dalla legge italiana. Per qualsiasi controversia 
+        derivante da o relativa a questi Termini o al Servizio, sarà competente in via 
+        esclusiva il Foro di <span class="highlight">[DA COMPLETARE - CITTÀ]</span>, 
+        salvo diversa disposizione inderogabile di legge a tutela del consumatore.
+    </p>
+
+    <h2>15. Contatti</h2>
+    <p>Per domande, reclami o segnalazioni relative a questi Termini, puoi contattarci:</p>
+    <div class="card">
+        <p>
+            <strong>Email:</strong> <span class="highlight">[DA COMPLETARE - EMAIL]</span><br>
+            <strong>Indirizzo:</strong> <span class="highlight">[DA COMPLETARE - INDIRIZZO]</span>
+        </p>
+    </div>
+
+    <hr style="margin: 40px 0; border: none; border-top: 1px solid var(--border);">
+
+    <p style="text-align: center; font-size: 13px; color: var(--muted);">
+        © <span class="highlight">[DA COMPLETARE - ANNO]</span> <span class="highlight">[DA COMPLETARE - NOME]</span>. Tutti i diritti riservati.
+    </p>
+
 </body>
 </html>
