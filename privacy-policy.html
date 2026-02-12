@@ -1,357 +1,933 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Privacy Policy - Tau</title>
-  <meta name="description" content="Informativa Privacy (GDPR) dell'app Tau." />
-  <style>
-    :root{
-      --bg:#0b0f17; --card:#111827; --text:#e5e7eb; --muted:#9ca3af;
-      --accent:#22c55e; --border:#1f2937; --warnbg:#fff7ed; --warn:#9a3412;
-      --pill:#0b1220;
-    }
-    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif;background:linear-gradient(180deg,var(--bg),#070a10);color:var(--text);line-height:1.6}
-    header{padding:48px 16px 16px;max-width:980px;margin:0 auto}
-    h1{margin:0 0 8px;font-size:34px;letter-spacing:-0.02em}
-    .sub{color:var(--muted);margin:0 0 20px}
-    main{max-width:980px;margin:0 auto;padding:0 16px 48px}
-    .card{background:rgba(17,24,39,.88);border:1px solid var(--border);border-radius:16px;padding:18px 18px;margin:14px 0;box-shadow:0 10px 25px rgba(0,0,0,.25)}
-    h2{margin:0 0 8px;font-size:20px}
-    h3{margin:16px 0 8px;font-size:16px;color:#d1d5db}
-    ul{margin:8px 0 0 18px}
-    a{color:var(--accent);text-decoration:none}
-    a:hover{text-decoration:underline}
-    .muted{color:var(--muted)}
-    .badge{display:inline-block;padding:4px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);font-size:12px;background:rgba(11,18,32,.55)}
-    .placeholder{
-      display:inline-block;
-      background:rgba(34,197,94,.12);
-      border:1px dashed rgba(34,197,94,.55);
-      padding:2px 8px;border-radius:10px
-    }
-    .warning{
-      background:var(--warnbg);
-      color:#111827;
-      border:1px solid #fed7aa;
-      border-radius:16px;
-      padding:14px 14px;
-    }
-    .warning strong{color:var(--warn)}
-    code{background:var(--pill);border:1px solid #1f2a44;padding:2px 6px;border-radius:8px;color:#e5e7eb}
-    table{width:100%;border-collapse:collapse;margin-top:10px}
-    th,td{border:1px solid var(--border);padding:10px;vertical-align:top}
-    th{background:rgba(11,18,32,.65);text-align:left;color:#d1d5db}
-    .pill{display:inline-block;padding:2px 10px;border:1px solid var(--border);border-radius:999px;background:rgba(11,18,32,.55);color:var(--muted);font-size:12px}
-    footer{max-width:980px;margin:0 auto;padding:0 16px 28px;color:var(--muted);font-size:14px}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Tau</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-light: #818cf8;
+            --primary-dark: #4f46e5;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --text: #1f2937;
+            --text-light: #374151;
+            --muted: #6b7280;
+            --bg: #ffffff;
+            --bg-alt: #f9fafb;
+            --card-bg: #f3f4f6;
+            --border: #e5e7eb;
+            --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f9fafb;
+                --text-light: #e5e7eb;
+                --muted: #9ca3af;
+                --bg: #111827;
+                --bg-alt: #1f2937;
+                --card-bg: #374151;
+                --border: #4b5563;
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        .hero {
+            background: var(--gradient);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 40px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .update-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--card-bg);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 30px;
+        }
+
+        .update-badge::before {
+            content: "📅";
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #fef3c7 0%, #fde68a 100%);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: 600;
+            color: #92400e;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .section-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text-light);
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        ul, ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            font-size: 15px;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .card-title {
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-card {
+            border-left: 4px solid var(--primary);
+        }
+
+        .warning-card {
+            border-left: 4px solid var(--warning);
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        .success-card {
+            border-left: 4px solid var(--success);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            background: var(--bg-alt);
+            color: var(--text-light);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: var(--card-bg);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-required {
+            background: rgba(239, 68, 68, 0.15);
+            color: #dc2626;
+        }
+
+        .badge-optional {
+            background: rgba(16, 185, 129, 0.15);
+            color: #059669;
+        }
+
+        .badge-auto {
+            background: rgba(99, 102, 241, 0.15);
+            color: #4f46e5;
+        }
+
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .right-item {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .right-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .right-title {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .right-desc {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        .provider-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .provider-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .provider-logo {
+            width: 48px;
+            height: 48px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .provider-info h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .provider-info p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .contact-card {
+            background: var(--gradient);
+            color: white;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .contact-card p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .contact-email {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 12px 24px;
+            border-radius: 100px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        .contact-email:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--bg-alt);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer p {
+            font-size: 13px;
+        }
+
+        a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .toc {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
+            color: var(--text);
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 8px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-list li {
+            margin: 0;
+        }
+
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: var(--text-light);
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .toc-list a:hover {
+            background: var(--card-bg);
+            text-decoration: none;
+        }
+
+        .toc-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+    </style>
 </head>
-
 <body>
-<header>
-  <div class="badge">Privacy Policy • Tau</div>
-  <h1>Privacy Policy</h1>
-  <p class="sub">
-    Informativa ai sensi del Regolamento (UE) 2016/679 (“GDPR”) e della normativa italiana applicabile.
-  </p>
 
-  <div class="warning">
-    <strong>Campi da completare:</strong>
-    alcuni dati del Titolare (es. P.IVA) non sono ancora disponibili. Sono evidenziati così:
-    <span class="placeholder"><strong>DA COMPLETARE</strong></span>.
-  </div>
-</header>
+    <div class="hero">
+        <div class="hero-icon">🛡️</div>
+        <h1>Privacy Policy</h1>
+        <p>Come proteggiamo i tuoi dati personali</p>
+    </div>
 
-<main>
+    <div class="container">
+        <div class="update-badge">
+            Ultimo aggiornamento: <span class="highlight">[DA COMPLETARE - DATA]</span>
+        </div>
 
-  <section class="card">
-    <h2>1) Titolare del trattamento</h2>
-    <p>Il Titolare del trattamento dei dati personali è:</p>
-    <ul>
-      <li><strong>Denominazione/Nome:</strong> <span class="placeholder"><strong>DA COMPLETARE (Nome Cognome / Società)</strong></span></li>
-      <li><strong>Indirizzo:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
-      <li><strong>P.IVA / Cod. Fiscale:</strong> <span class="placeholder"><strong>DA COMPLETARE (P.IVA non ancora disponibile)</strong></span></li>
-      <li><strong>Email privacy:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
-    </ul>
-    <p class="muted">
-      “Tau” è un’app di incontri che consente la creazione di un profilo, la scoperta di altri utenti, l’interazione tramite chat e la partecipazione a gruppi e live.
-    </p>
-  </section>
+        <!-- Indice -->
+        <div class="toc">
+            <h3>📑 Indice</h3>
+            <ul class="toc-list">
+                <li><a href="#titolare"><span class="toc-number">1</span> Titolare del Trattamento</a></li>
+                <li><a href="#dati-raccolti"><span class="toc-number">2</span> Dati che Raccogliamo</a></li>
+                <li><a href="#finalita"><span class="toc-number">3</span> Finalità del Trattamento</a></li>
+                <li><a href="#base-giuridica"><span class="toc-number">4</span> Base Giuridica</a></li>
+                <li><a href="#conservazione"><span class="toc-number">5</span> Conservazione dei Dati</a></li>
+                <li><a href="#condivisione"><span class="toc-number">6</span> Condivisione con Terze Parti</a></li>
+                <li><a href="#sicurezza"><span class="toc-number">7</span> Sicurezza dei Dati</a></li>
+                <li><a href="#diritti"><span class="toc-number">8</span> I Tuoi Diritti</a></li>
+                <li><a href="#minori"><span class="toc-number">9</span> Minori</a></li>
+                <li><a href="#modifiche"><span class="toc-number">10</span> Modifiche alla Policy</a></li>
+                <li><a href="#contatti"><span class="toc-number">11</span> Contatti</a></li>
+            </ul>
+        </div>
 
-  <section class="card">
-    <h2>2) DPO (Responsabile Protezione Dati)</h2>
-    <p>
-      Al momento il Titolare <strong>non ha nominato un DPO</strong>. Se verrà nominato, i contatti saranno pubblicati in questa pagina.
-    </p>
-  </section>
+        <!-- Sezione 1: Titolare -->
+        <section class="section" id="titolare">
+            <div class="section-header">
+                <div class="section-icon">👤</div>
+                <h2>1. Titolare del Trattamento</h2>
+            </div>
+            <div class="card info-card">
+                <p class="card-title">📋 Informazioni del Titolare</p>
+                <p>
+                    <strong>Titolare:</strong> <span class="highlight">[DA COMPLETARE - NOME/RAGIONE SOCIALE]</span><br>
+                    <strong>Sede:</strong> <span class="highlight">[DA COMPLETARE - INDIRIZZO]</span><br>
+                    <strong>P.IVA/C.F.:</strong> <span class="highlight">[DA COMPLETARE - P.IVA]</span><br>
+                    <strong>Email:</strong> <span class="highlight">[DA COMPLETARE - EMAIL]</span>
+                </p>
+            </div>
+            <p>
+                Il Titolare del trattamento è responsabile dei tuoi dati personali raccolti attraverso 
+                l'applicazione mobile <strong>Tau</strong> ("App").
+            </p>
+        </section>
 
-  <section class="card">
-    <h2>3) Dati trattati</h2>
+        <!-- Sezione 2: Dati Raccolti -->
+        <section class="section" id="dati-raccolti">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <h2>2. Dati che Raccogliamo</h2>
+            </div>
 
-    <h3>3.1 Dati di registrazione (Firebase Authentication)</h3>
-    <ul>
-      <li><strong>Email</strong> (obbligatoria)</li>
-      <li><strong>Password</strong> (obbligatoria) — gestita da Firebase Auth e memorizzata in forma <strong>hashata</strong></li>
-    </ul>
+            <h3>2.1 Dati forniti da te</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dato</th>
+                        <th>Tipo</th>
+                        <th>Utilizzo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Email</strong></td>
+                        <td><span class="badge badge-required">Obbligatorio</span></td>
+                        <td>Registrazione e accesso all'account</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Password</strong></td>
+                        <td><span class="badge badge-required">Obbligatorio</span></td>
+                        <td>Autenticazione (memorizzata in forma criptata)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nome</strong></td>
+                        <td><span class="badge badge-required">Obbligatorio</span></td>
+                        <td>Visualizzazione nel profilo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data di nascita</strong></td>
+                        <td><span class="badge badge-required">Obbligatorio</span></td>
+                        <td>Verifica maggiore età (18+) e calcolo età</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Genere</strong></td>
+                        <td><span class="badge badge-required">Obbligatorio</span></td>
+                        <td>Profilo e preferenze di matching</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Foto profilo</strong></td>
+                        <td><span class="badge badge-required">Min. 1</span></td>
+                        <td>Visualizzazione nel profilo (max 3 foto)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interessi</strong></td>
+                        <td><span class="badge badge-required">Obbligatorio</span></td>
+                        <td>Matching con altri utenti</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bio e lavoro</strong></td>
+                        <td><span class="badge badge-optional">Opzionale</span></td>
+                        <td>Arricchimento del profilo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Messaggi e chat</strong></td>
+                        <td><span class="badge badge-auto">Automatico</span></td>
+                        <td>Comunicazione tra utenti</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <h3>3.2 Dati del profilo (Firestore: <code>profiles/{uid}</code>)</h3>
-    <ul>
-      <li><strong>Nome</strong> (obbligatorio)</li>
-      <li><strong>Data di nascita</strong> (obbligatoria)</li>
-      <li><strong>Età</strong> (obbligatoria, calcolata; accesso consentito solo a maggiorenni 18+)</li>
-      <li><strong>Genere</strong> (obbligatorio) e <strong>dettaglio genere</strong> se “Altro” (condizionale)</li>
-      <li><strong>Interessi</strong> (obbligatori)</li>
-      <li><strong>Intento</strong> (es. amicizia/relazione) (obbligatorio)</li>
-      <li><strong>Preferenze “cerco”</strong> (obbligatorie)</li>
-      <li><strong>Bio</strong> (facoltativa)</li>
-      <li><strong>Lavoro</strong> (facoltativo)</li>
-      <li><strong>Lista utenti bloccati</strong> (<code>profiles/{uid}.blocked</code>) per sicurezza dell’utente</li>
-    </ul>
+            <h3>2.2 Dati di geolocalizzazione</h3>
+            <div class="card success-card">
+                <p class="card-title">🔒 Privacy della posizione</p>
+                <p>
+                    Per proteggere la tua privacy, le coordinate GPS vengono <strong>arrotondate a circa 1 km</strong> 
+                    di precisione prima di essere salvate. Non memorizziamo mai la tua posizione esatta.
+                </p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dato</th>
+                        <th>Tipo</th>
+                        <th>Utilizzo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Posizione approssimativa</strong></td>
+                        <td><span class="badge badge-optional">Con consenso</span></td>
+                        <td>Mostrare utenti nelle vicinanze</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Città</strong></td>
+                        <td><span class="badge badge-auto">Derivato</span></td>
+                        <td>Visualizzazione nel profilo</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <h3>3.3 Foto e immagini (Firebase Storage)</h3>
-    <ul>
-      <li><strong>Foto profilo</strong> (minimo 1, fino a 3) in <code>profile-images/{uid}/</code></li>
-      <li><strong>Immagini in chat</strong> in <code>chat-images/</code> (associate ai messaggi)</li>
-    </ul>
+            <h3>2.3 Dati raccolti automaticamente</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dato</th>
+                        <th>Finalità</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Stato di presenza</strong></td>
+                        <td>Mostrare quando sei attivo nei gruppi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ultima attività</strong></td>
+                        <td>Gestione sessione e sicurezza</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Log di sicurezza</strong></td>
+                        <td>Prevenzione abusi e audit GDPR</td>
+                    </tr>
+                </tbody>
+            </table>
 
-    <h3>3.4 Geolocalizzazione (Firestore: <code>profiles/{uid}</code>)</h3>
-    <ul>
-      <li><strong>Coordinate GPS</strong> (<code>profiles/{uid}.location</code>) — <strong>arrotondate a ~1 km</strong> per privacy</li>
-      <li><strong>Città</strong> (<code>profiles/{uid}.city</code>) — ottenuta da reverse geocoding</li>
-      <li><strong>Timestamp aggiornamento posizione</strong> (<code>profiles/{uid}.locationUpdatedAt</code>)</li>
-    </ul>
-    <p class="muted">La geolocalizzazione è opzionale e dipende dai permessi concessi dall’utente.</p>
+            <h3>2.4 Dati di moderazione</h3>
+            <p>
+                Per garantire un ambiente sicuro, le immagini caricate vengono analizzate automaticamente 
+                tramite intelligenza artificiale (Google Cloud Vision API) per rilevare contenuti 
+                potenzialmente inappropriati come nudità o contenuti violenti.
+            </p>
+            <div class="card warning-card">
+                <p class="card-title">⚠️ Importante</p>
+                <p>
+                    L'analisi è completamente automatizzata. Non visualizziamo manualmente le tue foto 
+                    a meno che non vengano segnalate da altri utenti.
+                </p>
+            </div>
+        </section>
 
-    <h3>3.5 Comunicazioni e chat (Firestore)</h3>
-    <ul>
-      <li><strong>Chat dirette</strong>: <code>chats/{chatId}/messages/</code></li>
-      <li><strong>Gruppi</strong>: <code>groupRooms/{id}/messages/</code></li>
-      <li><strong>Live nei gruppi</strong>: <code>groupRooms/{id}/lives/{id}/messages/</code></li>
-      <li><strong>Thread privati in gruppo</strong>: <code>groupRooms/{id}/privateThreads/{id}/messages/</code></li>
-      <li><strong>Presenza online</strong>: <code>groupRooms/{id}/presence/</code></li>
-      <li><strong>Presenza live</strong>: <code>groupRooms/{id}/livePresence/</code></li>
-    </ul>
+        <!-- Sezione 3: Finalità -->
+        <section class="section" id="finalita">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <h2>3. Finalità del Trattamento</h2>
+            </div>
+            <p>Utilizziamo i tuoi dati per le seguenti finalità:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Finalità</th>
+                        <th>Descrizione</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>🔐 Fornitura del servizio</strong></td>
+                        <td>Creazione account, gestione profilo, messaggistica, gruppi e live streaming</td>
+                    </tr>
+                    <tr>
+                        <td><strong>💕 Matching</strong></td>
+                        <td>Mostrarti profili compatibili in base a interessi, posizione e preferenze</td>
+                    </tr>
+                    <tr>
+                        <td><strong>🛡️ Sicurezza</strong></td>
+                        <td>Moderazione contenuti, prevenzione abusi, gestione segnalazioni</td>
+                    </tr>
+                    <tr>
+                        <td><strong>⚖️ Obblighi legali</strong></td>
+                        <td>Verifica maggiore età, risposta a richieste delle autorità</td>
+                    </tr>
+                    <tr>
+                        <td><strong>📈 Miglioramento</strong></td>
+                        <td>Analisi aggregate per migliorare l'esperienza utente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-    <h3>3.6 Moderazione e sicurezza (Firestore + servizi esterni)</h3>
-    <ul>
-      <li><strong>Segnalazioni utenti</strong>: <code>reports/</code></li>
-      <li><strong>Log audit</strong>: <code>auditLogs/</code></li>
-      <li><strong>Rate limiting</strong>: <code>rateLimits/</code> (protezione da abusi/DoS)</li>
-      <li><strong>Account eliminati</strong>: <code>deletedAccounts/</code> (solo metadata per compliance)</li>
-      <li><strong>Moderazione foto</strong>: stato <code>profiles/{uid}.photoMeta[].moderationStatus</code> (es. ok/flagged)</li>
-      <li><strong>Punteggi di sicurezza</strong> (es. adult/racy): usati internamente per prevenire contenuti espliciti</li>
-    </ul>
+        <!-- Sezione 4: Base Giuridica -->
+        <section class="section" id="base-giuridica">
+            <div class="section-header">
+                <div class="section-icon">⚖️</div>
+                <h2>4. Base Giuridica</h2>
+            </div>
+            <p>Il trattamento dei tuoi dati si basa su:</p>
+            <ul>
+                <li><strong>Esecuzione del contratto</strong> (Art. 6.1.b GDPR): per fornirti il servizio richiesto</li>
+                <li><strong>Consenso</strong> (Art. 6.1.a GDPR): per la geolocalizzazione e comunicazioni opzionali</li>
+                <li><strong>Legittimo interesse</strong> (Art. 6.1.f GDPR): per sicurezza e prevenzione frodi</li>
+                <li><strong>Obbligo legale</strong> (Art. 6.1.c GDPR): per verifica età e adempimenti normativi</li>
+            </ul>
+        </section>
 
-    <h3>3.7 Dati tecnici locali</h3>
-    <ul>
-      <li><strong>Ultima attività</strong> memorizzata localmente (AsyncStorage) per gestione sessione e timeout (<strong>30 giorni</strong> di inattività)</li>
-    </ul>
+        <!-- Sezione 5: Conservazione -->
+        <section class="section" id="conservazione">
+            <div class="section-header">
+                <div class="section-icon">🗄️</div>
+                <h2>5. Conservazione dei Dati</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo di dato</th>
+                        <th>Durata conservazione</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dati del profilo</td>
+                        <td>Fino alla cancellazione dell'account</td>
+                    </tr>
+                    <tr>
+                        <td>Messaggi chat dirette</td>
+                        <td>Fino alla cancellazione dell'account o del messaggio</td>
+                    </tr>
+                    <tr>
+                        <td>Messaggi nei gruppi</td>
+                        <td>Eliminati quando il gruppo diventa inattivo (24 ore)</td>
+                    </tr>
+                    <tr>
+                        <td>Messaggi live</td>
+                        <td>Eliminati al termine della diretta</td>
+                    </tr>
+                    <tr>
+                        <td>Log di sicurezza</td>
+                        <td><span class="highlight">[DA COMPLETARE - ES: 12 mesi]</span></td>
+                    </tr>
+                    <tr>
+                        <td>Dati account eliminati</td>
+                        <td>Metadati minimi per <span class="highlight">[DA COMPLETARE - ES: 30 giorni]</span> per compliance</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card success-card">
+                <p class="card-title">✅ Cancellazione completa</p>
+                <p>
+                    Quando elimini il tuo account, cancelliamo permanentemente tutti i tuoi dati: 
+                    profilo, foto, messaggi, presenza nei gruppi e file di storage.
+                </p>
+            </div>
+        </section>
 
-    <h3>3.8 Streaming video/audio (LiveKit)</h3>
-    <ul>
-      <li><strong>Stream audio/video</strong> gestito tramite LiveKit Cloud (transitorio, non registrato)</li>
-      <li><strong>Token di accesso</strong> alla stanza generato server-side (temporaneo)</li>
-    </ul>
-  </section>
+        <!-- Sezione 6: Terze Parti -->
+        <section class="section" id="condivisione">
+            <div class="section-header">
+                <div class="section-icon">🤝</div>
+                <h2>6. Condivisione con Terze Parti</h2>
+            </div>
+            <p>
+                <strong>Non vendiamo i tuoi dati.</strong> Condividiamo i dati solo con i fornitori 
+                necessari al funzionamento del servizio:
+            </p>
 
-  <section class="card">
-    <h2>4) Finalità del trattamento e basi giuridiche</h2>
-    <table>
-      <thead>
-        <tr>
-          <th>Finalità</th>
-          <th>Dati coinvolti (esempi)</th>
-          <th>Base giuridica</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Creazione account e gestione profilo</strong></td>
-          <td>Email, credenziali, nome, nascita/età, genere, interessi, intento, preferenze, foto profilo</td>
-          <td>Esecuzione del contratto/servizio (art. 6(1)(b) GDPR)</td>
-        </tr>
-        <tr>
-          <td><strong>Funzionalità social: chat, gruppi, live</strong></td>
-          <td>Messaggi, presenza, contenuti condivisi, token live, stream A/V</td>
-          <td>Esecuzione del contratto/servizio (art. 6(1)(b))</td>
-        </tr>
-        <tr>
-          <td><strong>Geolocalizzazione per mostrare utenti in zona</strong></td>
-          <td>Coordinate arrotondate (~1 km), città</td>
-          <td>Consenso (art. 6(1)(a)) tramite permessi dispositivo/app</td>
-        </tr>
-        <tr>
-          <td><strong>Moderazione contenuti e prevenzione abusi</strong></td>
-          <td>Foto (analisi nudità), punteggi sicurezza, segnalazioni, blocchi</td>
-          <td>Legittimo interesse alla sicurezza della piattaforma e degli utenti (art. 6(1)(f)); in alcuni casi obblighi legali (art. 6(1)(c))</td>
-        </tr>
-        <tr>
-          <td><strong>Sicurezza, audit e compliance</strong></td>
-          <td>Audit logs, rate limits, metadata account eliminati</td>
-          <td>Legittimo interesse (art. 6(1)(f)) e/o obbligo legale (art. 6(1)(c))</td>
-        </tr>
-        <tr>
-          <td><strong>Assistenza e gestione richieste</strong></td>
-          <td>Dati forniti in supporto/contatti, segnalazioni</td>
-          <td>Esecuzione del contratto (art. 6(1)(b)) e/o legittimo interesse (art. 6(1)(f))</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+            <div class="provider-list">
+                <div class="provider-item">
+                    <div class="provider-logo">🔥</div>
+                    <div class="provider-info">
+                        <h4>Firebase / Google Cloud Platform</h4>
+                        <p>Hosting, database, autenticazione, storage file</p>
+                    </div>
+                </div>
+                <div class="provider-item">
+                    <div class="provider-logo">👁️</div>
+                    <div class="provider-info">
+                        <h4>Google Cloud Vision API</h4>
+                        <p>Analisi automatica delle immagini per moderazione contenuti</p>
+                    </div>
+                </div>
+                <div class="provider-item">
+                    <div class="provider-logo">📹</div>
+                    <div class="provider-info">
+                        <h4>LiveKit</h4>
+                        <p>Streaming video/audio per le dirette nei gruppi</p>
+                    </div>
+                </div>
+            </div>
 
-  <section class="card">
-    <h2>5) Consensi richiesti</h2>
-    <ul>
-      <li><strong>Conferma maggiore età (18+)</strong> in registrazione</li>
-      <li><strong>Accettazione Privacy Policy</strong> durante setup profilo</li>
-      <li><strong>Accettazione regole community</strong> durante setup profilo</li>
-      <li><strong>Permesso geolocalizzazione</strong> (opzionale) durante setup profilo / impostazioni dispositivo</li>
-    </ul>
-  </section>
+            <p style="margin-top: 20px;">
+                Tutti i fornitori sono conformi al GDPR e i dati sono trattati all'interno dell'Unione Europea 
+                o in paesi con adeguate garanzie di protezione (clausole contrattuali standard).
+            </p>
+        </section>
 
-  <section class="card">
-    <h2>6) Conservazione (retention)</h2>
-    <ul>
-      <li><strong>Account e profilo:</strong> finché l’account è attivo; cancellati su richiesta di eliminazione account (salvo eccezioni sotto).</li>
-      <li><strong>Chat dirette:</strong> <code>chats/{chatId}/messages/</code> conservati fino a cancellazione account (o rimozione secondo funzionalità disponibili).</li>
-      <li><strong>Messaggi gruppi:</strong> <code>groupRooms/{id}/messages/</code> eliminati quando il gruppo è inattivo (<strong>24 ore</strong>).</li>
-      <li><strong>Messaggi live:</strong> <code>groupRooms/{id}/lives/{id}/messages/</code> eliminati a <strong>fine live</strong>.</li>
-      <li><strong>Thread privati in gruppo:</strong> eliminati con il gruppo.</li>
-      <li><strong>Immagini chat:</strong> conservate fino a cancellazione del messaggio associato o dell’account.</li>
-      <li><strong>Report/abusi:</strong> conservati per il tempo necessario a gestire la segnalazione e per eventuale tutela/azioni di sicurezza.</li>
-      <li><strong>Audit logs e rate limits:</strong> conservati per un periodo ragionevole legato a sicurezza e compliance:
-        <span class="placeholder"><strong>DA COMPLETARE (es. 6–12 mesi)</strong></span>
-      </li>
-      <li><strong>deletedAccounts (metadata):</strong> conservati per finalità di compliance GDPR e prevenzione abusi, limitando i dati al minimo necessario.</li>
-      <li><strong>Dati locali (AsyncStorage - ultima attività):</strong> timeout sessione dopo <strong>30 giorni</strong> di inattività.</li>
-      <li><strong>Streaming LiveKit:</strong> transitorio, non registrato (salvo cambi futuri che verranno comunicati).</li>
-    </ul>
-  </section>
+        <!-- Sezione 7: Sicurezza -->
+        <section class="section" id="sicurezza">
+            <div class="section-header">
+                <div class="section-icon">🔒</div>
+                <h2>7. Sicurezza dei Dati</h2>
+            </div>
+            <p>Adottiamo misure tecniche e organizzative per proteggere i tuoi dati:</p>
+            <div class="rights-grid">
+                <div class="right-item">
+                    <div class="right-icon">🔐</div>
+                    <div class="right-title">Password criptate</div>
+                    <div class="right-desc">Mai memorizzate in chiaro</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">📍</div>
+                    <div class="right-title">Posizione approssimata</div>
+                    <div class="right-desc">Arrotondata a ~1 km</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">🚫</div>
+                    <div class="right-title">Rate limiting</div>
+                    <div class="right-desc">Protezione contro abusi</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">🔑</div>
+                    <div class="right-title">Re-autenticazione</div>
+                    <div class="right-desc">Per operazioni sensibili</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">⏱️</div>
+                    <div class="right-title">Timeout sessione</div>
+                    <div class="right-desc">Logout automatico dopo 30 giorni</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">📸</div>
+                    <div class="right-title">Anti-screenshot</div>
+                    <div class="right-desc">Protezione contenuti (best-effort)</div>
+                </div>
+            </div>
+        </section>
 
-  <section class="card">
-    <h2>7) Destinatari e fornitori (Responsabili/Sub-responsabili)</h2>
-    <p>
-      Per erogare Tau utilizziamo fornitori tecnici che possono trattare dati per nostro conto come <strong>Responsabili del trattamento</strong> (art. 28 GDPR) o,
-      in alcuni casi, come <strong>Titolari autonomi</strong>.
-    </p>
+        <!-- Sezione 8: Diritti -->
+        <section class="section" id="diritti">
+            <div class="section-header">
+                <div class="section-icon">✊</div>
+                <h2>8. I Tuoi Diritti</h2>
+            </div>
+            <p>In base al GDPR, hai i seguenti diritti sui tuoi dati personali:</p>
+            
+            <div class="rights-grid">
+                <div class="right-item">
+                    <div class="right-icon">👀</div>
+                    <div class="right-title">Accesso</div>
+                    <div class="right-desc">Visualizza i tuoi dati nel profilo</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">✏️</div>
+                    <div class="right-title">Rettifica</div>
+                    <div class="right-desc">Modifica i dati dall'app</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">🗑️</div>
+                    <div class="right-title">Cancellazione</div>
+                    <div class="right-desc">Elimina l'account dalle impostazioni</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">⏸️</div>
+                    <div class="right-title">Limitazione</div>
+                    <div class="right-desc">Richiedi la limitazione del trattamento</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">📦</div>
+                    <div class="right-title">Portabilità</div>
+                    <div class="right-desc">Richiedi i tuoi dati in formato digitale</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">🚫</div>
+                    <div class="right-title">Opposizione</div>
+                    <div class="right-desc">Opponiti a determinati trattamenti</div>
+                </div>
+            </div>
 
-    <h3>7.1 Google/Firebase (Google Cloud / Firebase)</h3>
-    <ul>
-      <li><strong>Firebase Authentication</strong> (gestione account e credenziali)</li>
-      <li><strong>Firestore Database</strong> (profili, chat, gruppi, presenze, report, audit, rate limits)</li>
-      <li><strong>Firebase Storage</strong> (foto profilo e immagini chat)</li>
-    </ul>
+            <p>
+                Per esercitare i tuoi diritti, contattaci all'indirizzo 
+                <span class="highlight">[DA COMPLETARE - EMAIL]</span> o utilizza le funzioni 
+                disponibili nell'app (Impostazioni > Privacy > Account).
+            </p>
+            <p>
+                Hai inoltre il diritto di presentare un reclamo al <strong>Garante per la Protezione 
+                dei Dati Personali</strong> (www.garanteprivacy.it) se ritieni che i tuoi diritti 
+                siano stati violati.
+            </p>
+        </section>
 
-    <h3>7.2 Google Cloud Vision API (moderazione immagini)</h3>
-    <ul>
-      <li>Analisi automatizzata delle immagini (es. nudità/contenuti espliciti) per sicurezza della community.</li>
-    </ul>
+        <!-- Sezione 9: Minori -->
+        <section class="section" id="minori">
+            <div class="section-header">
+                <div class="section-icon">🔞</div>
+                <h2>9. Minori</h2>
+            </div>
+            <div class="card warning-card">
+                <p class="card-title">⚠️ Servizio riservato ai maggiorenni</p>
+                <p>
+                    L'App è destinata esclusivamente a utenti di età pari o superiore a <strong>18 anni</strong>. 
+                    Non raccogliamo consapevolmente dati di minori.
+                </p>
+            </div>
+            <p>
+                Verifichiamo l'età durante la registrazione richiedendo la data di nascita. 
+                Se veniamo a conoscenza di un account appartenente a un minore, lo elimineremo immediatamente.
+            </p>
+            <p>
+                Se sei un genitore/tutore e ritieni che tuo figlio abbia creato un account, 
+                contattaci a <span class="highlight">[DA COMPLETARE - EMAIL]</span>.
+            </p>
+        </section>
 
-    <h3>7.3 LiveKit Cloud (streaming)</h3>
-    <ul>
-      <li>Gestione tecnica dello stream audio/video in tempo reale (non registrato) e infrastruttura delle room live.</li>
-    </ul>
+        <!-- Sezione 10: Modifiche -->
+        <section class="section" id="modifiche">
+            <div class="section-header">
+                <div class="section-icon">📝</div>
+                <h2>10. Modifiche alla Policy</h2>
+            </div>
+            <p>
+                Potremmo aggiornare questa Privacy Policy periodicamente. In caso di modifiche sostanziali, 
+                ti informeremo tramite:
+            </p>
+            <ul>
+                <li>Notifica push nell'App</li>
+                <li>Email all'indirizzo registrato</li>
+                <li>Avviso visibile all'apertura dell'App</li>
+            </ul>
+            <p>
+                Ti invitiamo a consultare regolarmente questa pagina. La data dell'ultimo aggiornamento 
+                è indicata in cima al documento.
+            </p>
+        </section>
 
-    <p class="muted">
-      Su richiesta, puoi ottenere maggiori dettagli sui fornitori effettivamente utilizzati e sui relativi ruoli privacy.
-    </p>
-  </section>
+        <!-- Sezione 11: Contatti -->
+        <section class="section" id="contatti">
+            <div class="section-header">
+                <div class="section-icon">📬</div>
+                <h2>11. Contatti</h2>
+            </div>
+            <p>
+                Per domande, richieste o reclami relativi alla privacy e al trattamento dei tuoi dati 
+                personali, puoi contattarci:
+            </p>
+            <div class="contact-card">
+                <h3>📧 Scrivici</h3>
+                <p>Risponderemo entro 30 giorni dalla ricezione della richiesta</p>
+                <a href="mailto:[DA COMPLETARE]" class="contact-email">
+                    <span class="highlight">[DA COMPLETARE - EMAIL]</span>
+                </a>
+            </div>
+        </section>
 
-  <section class="card">
-    <h2>8) Trasferimenti fuori dallo SEE</h2>
-    <p>
-      Alcuni fornitori possono trattare dati anche al di fuori dello Spazio Economico Europeo (SEE).
-      In tal caso, il trasferimento avviene nel rispetto degli artt. 44 e seguenti GDPR (es. decisioni di adeguatezza, Clausole Contrattuali Standard, misure supplementari).
-    </p>
-  </section>
+    </div>
 
-  <section class="card">
-    <h2>9) Moderazione automatica e “matching”</h2>
-    <p>
-      Tau utilizza:
-    </p>
-    <ul>
-      <li><strong>Moderazione automatica immagini</strong> (Vision API) per rilevare e limitare contenuti espliciti.</li>
-      <li><strong>Logiche di suggerimento/matching</strong> basate su preferenze e parametri del profilo (es. interessi, intento, preferenze, posizione arrotondata).</li>
-    </ul>
-    <p class="muted">
-      Queste attività, di norma, non producono effetti giuridici sull’utente ai sensi dell’art. 22 GDPR.
-      Se in futuro verranno introdotte decisioni automatizzate con effetti significativi, aggiorneremo l’informativa.
-    </p>
-  </section>
+    <footer class="footer">
+        <p>
+            © <span class="highlight">[DA COMPLETARE - ANNO]</span> 
+            <span class="highlight">[DA COMPLETARE - NOME]</span>. Tutti i diritti riservati.
+        </p>
+        <p style="margin-top: 10px;">
+            <a href="terms.html">Termini e Condizioni</a>
+        </p>
+    </footer>
 
-  <section class="card">
-    <h2>10) Sicurezza</h2>
-    <p>Misure implementate (in base al progetto):</p>
-    <ul>
-      <li>Password gestite da Firebase Auth (hashate)</li>
-      <li>Coordinate GPS arrotondate (~1 km)</li>
-      <li>Rate limiting su API</li>
-      <li>Ri-autenticazione per eliminazione account</li>
-      <li>Timeout sessione dopo 30 giorni di inattività</li>
-      <li>Protezione screenshot “best-effort” (dove supportata)</li>
-      <li>Moderazione automatica delle immagini</li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>11) Minori</h2>
-    <p>
-      Tau è destinata esclusivamente a utenti <strong>maggiorenni (18+)</strong>.
-      Se ritieni che un minore abbia fornito dati personali, contattaci per la rimozione.
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>12) Diritti dell’utente (GDPR)</h2>
-    <p>Puoi esercitare i diritti previsti dagli artt. 15–22 GDPR, tra cui:</p>
-    <ul>
-      <li><strong>Accesso</strong> (dati visibili nel profilo)</li>
-      <li><strong>Rettifica</strong> (modifica profilo in-app)</li>
-      <li><strong>Cancellazione</strong> (funzione “Elimina account” — cancella i dati, salvo metadata minimi in <code>deletedAccounts</code> per compliance/sicurezza)</li>
-      <li><strong>Portabilità</strong> <span class="pill">da implementare</span> (export dati)</li>
-      <li><strong>Opposizione</strong> e limitazione (quando applicabile)</li>
-      <li><strong>Revoca del consenso</strong> (es. geolocalizzazione) in qualsiasi momento dalle impostazioni</li>
-      <li><strong>Reclamo</strong> al Garante per la protezione dei dati personali</li>
-    </ul>
-    <p>
-      Per esercitare i diritti: <span class="placeholder"><strong>DA COMPLETARE (email privacy)</strong></span>
-    </p>
-  </section>
-
-  <section class="card">
-    <h2>13) Cookie e log (questa pagina web)</h2>
-    <p>
-      Questa pagina è ospitata su GitHub Pages e può generare log tecnici essenziali (es. richieste HTTP) necessari al funzionamento.
-      Tau non usa cookie di profilazione su questa pagina salvo future integrazioni.
-    </p>
-    <ul>
-      <li><strong>Analytics:</strong> <span class="placeholder"><strong>DA COMPLETARE (es. non usati / usati con consenso)</strong></span></li>
-    </ul>
-  </section>
-
-  <section class="card">
-    <h2>14) Modifiche all’informativa</h2>
-    <p>
-      Potremmo aggiornare questa informativa per riflettere modifiche al servizio o per obblighi normativi.
-      Pubblicheremo la versione aggiornata su questa pagina indicando la data.
-    </p>
-    <p><strong>Ultimo aggiornamento:</strong> <span class="placeholder"><strong>DA COMPLETARE (es. 12/02/2026)</strong></span></p>
-  </section>
-
-  <section class="card">
-    <h2>15) Contatti</h2>
-    <ul>
-      <li><strong>Email:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
-      <li><strong>Indirizzo:</strong> <span class="placeholder"><strong>DA COMPLETARE</strong></span></li>
-    </ul>
-  </section>
-
-</main>
-
-<footer>
-  <p>© <span id="year"></span> Tau • Privacy Policy</p>
-  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
-</footer>
 </body>
 </html>
