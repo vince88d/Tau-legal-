@@ -3,471 +3,931 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Termini e Condizioni - Tau</title>
+    <title>Privacy Policy - Tau</title>
     <style>
         :root {
             --primary: #6366f1;
+            --primary-light: #818cf8;
+            --primary-dark: #4f46e5;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
             --text: #1f2937;
+            --text-light: #374151;
             --muted: #6b7280;
             --bg: #ffffff;
-            --card-bg: #f9fafb;
+            --bg-alt: #f9fafb;
+            --card-bg: #f3f4f6;
             --border: #e5e7eb;
+            --gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
         }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text: #f9fafb;
+                --text-light: #e5e7eb;
+                --muted: #9ca3af;
+                --bg: #111827;
+                --bg-alt: #1f2937;
+                --card-bg: #374151;
+                --border: #4b5563;
+            }
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.7;
-            padding: 20px;
+        }
+
+        .hero {
+            background: var(--gradient);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 40px;
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            opacity: 0.9;
+        }
+
+        .container {
             max-width: 800px;
             margin: 0 auto;
+            padding: 40px 20px;
         }
-        h1 {
-            font-size: 28px;
-            margin-bottom: 8px;
-            color: var(--primary);
-        }
-        h2 {
-            font-size: 20px;
-            margin-top: 32px;
-            margin-bottom: 12px;
-            color: var(--text);
-            border-bottom: 2px solid var(--primary);
-            padding-bottom: 8px;
-        }
-        h3 {
-            font-size: 16px;
-            margin-top: 20px;
-            margin-bottom: 8px;
-        }
-        p, li {
-            font-size: 15px;
+
+        .update-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--card-bg);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 13px;
             color: var(--muted);
-            margin-bottom: 12px;
+            margin-bottom: 30px;
         }
-        ul, ol {
-            padding-left: 24px;
-            margin-bottom: 16px;
+
+        .update-badge::before {
+            content: "📅";
         }
-        li {
-            margin-bottom: 8px;
-        }
+
         .highlight {
-            background: #fef3c7;
-            padding: 2px 6px;
+            background: linear-gradient(120deg, #fef3c7 0%, #fde68a 100%);
+            padding: 2px 8px;
             border-radius: 4px;
             font-weight: 600;
             color: #92400e;
         }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .section-icon {
+            width: 44px;
+            height: 44px;
+            background: var(--gradient);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        h3 {
+            font-size: 17px;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text-light);
+        }
+
+        p {
+            font-size: 15px;
+            color: var(--muted);
+            margin-bottom: 16px;
+        }
+
+        ul, ol {
+            padding-left: 24px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            font-size: 15px;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
         .card {
             background: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .card-title {
+            font-weight: 700;
+            color: var(--text);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .info-card {
+            border-left: 4px solid var(--primary);
+        }
+
+        .warning-card {
+            border-left: 4px solid var(--warning);
+            background: rgba(245, 158, 11, 0.1);
+        }
+
+        .success-card {
+            border-left: 4px solid var(--success);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            background: var(--bg-alt);
+            color: var(--text-light);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: var(--card-bg);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge-required {
+            background: rgba(239, 68, 68, 0.15);
+            color: #dc2626;
+        }
+
+        .badge-optional {
+            background: rgba(16, 185, 129, 0.15);
+            color: #059669;
+        }
+
+        .badge-auto {
+            background: rgba(99, 102, 241, 0.15);
+            color: #4f46e5;
+        }
+
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .right-item {
+            background: var(--bg-alt);
             border: 1px solid var(--border);
             border-radius: 12px;
             padding: 16px;
-            margin: 16px 0;
+            text-align: center;
         }
-        .warning {
-            background: #fef2f2;
-            border-color: #fecaca;
+
+        .right-icon {
+            font-size: 28px;
+            margin-bottom: 8px;
         }
-        .warning p {
-            color: #991b1b;
+
+        .right-title {
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
         }
-        .update-date {
+
+        .right-desc {
             font-size: 13px;
             color: var(--muted);
-            margin-bottom: 24px;
         }
+
+        .provider-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .provider-item {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+        }
+
+        .provider-logo {
+            width: 48px;
+            height: 48px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .provider-info h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text);
+            margin-bottom: 4px;
+        }
+
+        .provider-info p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+        .contact-card {
+            background: var(--gradient);
+            color: white;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+
+        .contact-card h3 {
+            color: white;
+            margin-top: 0;
+        }
+
+        .contact-card p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .contact-email {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 12px 24px;
+            border-radius: 100px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 10px;
+            transition: background 0.2s;
+        }
+
+        .contact-email:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--bg-alt);
+            border-top: 1px solid var(--border);
+        }
+
+        .footer p {
+            font-size: 13px;
+        }
+
         a {
             color: var(--primary);
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 16px 0;
-            font-size: 14px;
-        }
-        th, td {
+
+        .toc {
+            background: var(--bg-alt);
             border: 1px solid var(--border);
-            padding: 10px;
-            text-align: left;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 40px;
         }
-        th {
-            background: var(--card-bg);
-            font-weight: 600;
+
+        .toc h3 {
+            margin-top: 0;
+            margin-bottom: 16px;
             color: var(--text);
+        }
+
+        .toc-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 8px;
+            list-style: none;
+            padding: 0;
+        }
+
+        .toc-list li {
+            margin: 0;
+        }
+
+        .toc-list a {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-radius: 8px;
+            color: var(--text-light);
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .toc-list a:hover {
+            background: var(--card-bg);
+            text-decoration: none;
+        }
+
+        .toc-number {
+            background: var(--primary);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
-    <h1>Termini e Condizioni di Utilizzo</h1>
-    <p class="update-date">Ultimo aggiornamento: <span class="highlight">[DA COMPLETARE - DATA]</span></p>
 
-    <div class="card">
-        <p><strong>Titolare del Servizio:</strong></p>
+    <div class="hero">
+        <div class="hero-icon">🛡️</div>
+        <h1>Privacy Policy</h1>
+        <p>Come proteggiamo i tuoi dati personali</p>
+    </div>
+
+    <div class="container">
+        <div class="update-badge">
+            Ultimo aggiornamento: <span class="highlight">[DA COMPLETARE - DATA]</span>
+        </div>
+
+        <!-- Indice -->
+        <div class="toc">
+            <h3>📑 Indice</h3>
+            <ul class="toc-list">
+                <li><a href="#titolare"><span class="toc-number">1</span> Titolare del Trattamento</a></li>
+                <li><a href="#dati-raccolti"><span class="toc-number">2</span> Dati che Raccogliamo</a></li>
+                <li><a href="#finalita"><span class="toc-number">3</span> Finalità del Trattamento</a></li>
+                <li><a href="#base-giuridica"><span class="toc-number">4</span> Base Giuridica</a></li>
+                <li><a href="#conservazione"><span class="toc-number">5</span> Conservazione dei Dati</a></li>
+                <li><a href="#condivisione"><span class="toc-number">6</span> Condivisione con Terze Parti</a></li>
+                <li><a href="#sicurezza"><span class="toc-number">7</span> Sicurezza dei Dati</a></li>
+                <li><a href="#diritti"><span class="toc-number">8</span> I Tuoi Diritti</a></li>
+                <li><a href="#minori"><span class="toc-number">9</span> Minori</a></li>
+                <li><a href="#modifiche"><span class="toc-number">10</span> Modifiche alla Policy</a></li>
+                <li><a href="#contatti"><span class="toc-number">11</span> Contatti</a></li>
+            </ul>
+        </div>
+
+        <!-- Sezione 1: Titolare -->
+        <section class="section" id="titolare">
+            <div class="section-header">
+                <div class="section-icon">👤</div>
+                <h2>1. Titolare del Trattamento</h2>
+            </div>
+            <div class="card info-card">
+                <p class="card-title">📋 Informazioni del Titolare</p>
+                <p>
+                    <strong>Titolare:</strong> <span class="highlight">[DA COMPLETARE - NOME/RAGIONE SOCIALE]</span><br>
+                    <strong>Sede:</strong> <span class="highlight">[DA COMPLETARE - INDIRIZZO]</span><br>
+                    <strong>P.IVA/C.F.:</strong> <span class="highlight">[DA COMPLETARE - P.IVA]</span><br>
+                    <strong>Email:</strong> <span class="highlight">[DA COMPLETARE - EMAIL]</span>
+                </p>
+            </div>
+            <p>
+                Il Titolare del trattamento è responsabile dei tuoi dati personali raccolti attraverso 
+                l'applicazione mobile <strong>Tau</strong> ("App").
+            </p>
+        </section>
+
+        <!-- Sezione 2: Dati Raccolti -->
+        <section class="section" id="dati-raccolti">
+            <div class="section-header">
+                <div class="section-icon">📊</div>
+                <h2>2. Dati che Raccogliamo</h2>
+            </div>
+
+            <h3>2.1 Dati forniti da te</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dato</th>
+                        <th>Tipo</th>
+                        <th>Utilizzo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Email</strong></td>
+                        <td><span class="badge badge-required">Obbligatorio</span></td>
+                        <td>Registrazione e accesso all'account</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Password</strong></td>
+                        <td><span class="badge badge-required">Obbligatorio</span></td>
+                        <td>Autenticazione (memorizzata in forma criptata)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Nome</strong></td>
+                        <td><span class="badge badge-required">Obbligatorio</span></td>
+                        <td>Visualizzazione nel profilo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Data di nascita</strong></td>
+                        <td><span class="badge badge-required">Obbligatorio</span></td>
+                        <td>Verifica maggiore età (18+) e calcolo età</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Genere</strong></td>
+                        <td><span class="badge badge-required">Obbligatorio</span></td>
+                        <td>Profilo e preferenze di matching</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Foto profilo</strong></td>
+                        <td><span class="badge badge-required">Min. 1</span></td>
+                        <td>Visualizzazione nel profilo (max 3 foto)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Interessi</strong></td>
+                        <td><span class="badge badge-required">Obbligatorio</span></td>
+                        <td>Matching con altri utenti</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Bio e lavoro</strong></td>
+                        <td><span class="badge badge-optional">Opzionale</span></td>
+                        <td>Arricchimento del profilo</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Messaggi e chat</strong></td>
+                        <td><span class="badge badge-auto">Automatico</span></td>
+                        <td>Comunicazione tra utenti</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>2.2 Dati di geolocalizzazione</h3>
+            <div class="card success-card">
+                <p class="card-title">🔒 Privacy della posizione</p>
+                <p>
+                    Per proteggere la tua privacy, le coordinate GPS vengono <strong>arrotondate a circa 1 km</strong> 
+                    di precisione prima di essere salvate. Non memorizziamo mai la tua posizione esatta.
+                </p>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dato</th>
+                        <th>Tipo</th>
+                        <th>Utilizzo</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Posizione approssimativa</strong></td>
+                        <td><span class="badge badge-optional">Con consenso</span></td>
+                        <td>Mostrare utenti nelle vicinanze</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Città</strong></td>
+                        <td><span class="badge badge-auto">Derivato</span></td>
+                        <td>Visualizzazione nel profilo</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>2.3 Dati raccolti automaticamente</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Dato</th>
+                        <th>Finalità</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Stato di presenza</strong></td>
+                        <td>Mostrare quando sei attivo nei gruppi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ultima attività</strong></td>
+                        <td>Gestione sessione e sicurezza</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Log di sicurezza</strong></td>
+                        <td>Prevenzione abusi e audit GDPR</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>2.4 Dati di moderazione</h3>
+            <p>
+                Per garantire un ambiente sicuro, le immagini caricate vengono analizzate automaticamente 
+                tramite intelligenza artificiale (Google Cloud Vision API) per rilevare contenuti 
+                potenzialmente inappropriati come nudità o contenuti violenti.
+            </p>
+            <div class="card warning-card">
+                <p class="card-title">⚠️ Importante</p>
+                <p>
+                    L'analisi è completamente automatizzata. Non visualizziamo manualmente le tue foto 
+                    a meno che non vengano segnalate da altri utenti.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sezione 3: Finalità -->
+        <section class="section" id="finalita">
+            <div class="section-header">
+                <div class="section-icon">🎯</div>
+                <h2>3. Finalità del Trattamento</h2>
+            </div>
+            <p>Utilizziamo i tuoi dati per le seguenti finalità:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Finalità</th>
+                        <th>Descrizione</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>🔐 Fornitura del servizio</strong></td>
+                        <td>Creazione account, gestione profilo, messaggistica, gruppi e live streaming</td>
+                    </tr>
+                    <tr>
+                        <td><strong>💕 Matching</strong></td>
+                        <td>Mostrarti profili compatibili in base a interessi, posizione e preferenze</td>
+                    </tr>
+                    <tr>
+                        <td><strong>🛡️ Sicurezza</strong></td>
+                        <td>Moderazione contenuti, prevenzione abusi, gestione segnalazioni</td>
+                    </tr>
+                    <tr>
+                        <td><strong>⚖️ Obblighi legali</strong></td>
+                        <td>Verifica maggiore età, risposta a richieste delle autorità</td>
+                    </tr>
+                    <tr>
+                        <td><strong>📈 Miglioramento</strong></td>
+                        <td>Analisi aggregate per migliorare l'esperienza utente</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sezione 4: Base Giuridica -->
+        <section class="section" id="base-giuridica">
+            <div class="section-header">
+                <div class="section-icon">⚖️</div>
+                <h2>4. Base Giuridica</h2>
+            </div>
+            <p>Il trattamento dei tuoi dati si basa su:</p>
+            <ul>
+                <li><strong>Esecuzione del contratto</strong> (Art. 6.1.b GDPR): per fornirti il servizio richiesto</li>
+                <li><strong>Consenso</strong> (Art. 6.1.a GDPR): per la geolocalizzazione e comunicazioni opzionali</li>
+                <li><strong>Legittimo interesse</strong> (Art. 6.1.f GDPR): per sicurezza e prevenzione frodi</li>
+                <li><strong>Obbligo legale</strong> (Art. 6.1.c GDPR): per verifica età e adempimenti normativi</li>
+            </ul>
+        </section>
+
+        <!-- Sezione 5: Conservazione -->
+        <section class="section" id="conservazione">
+            <div class="section-header">
+                <div class="section-icon">🗄️</div>
+                <h2>5. Conservazione dei Dati</h2>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tipo di dato</th>
+                        <th>Durata conservazione</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Dati del profilo</td>
+                        <td>Fino alla cancellazione dell'account</td>
+                    </tr>
+                    <tr>
+                        <td>Messaggi chat dirette</td>
+                        <td>Fino alla cancellazione dell'account o del messaggio</td>
+                    </tr>
+                    <tr>
+                        <td>Messaggi nei gruppi</td>
+                        <td>Eliminati quando il gruppo diventa inattivo (24 ore)</td>
+                    </tr>
+                    <tr>
+                        <td>Messaggi live</td>
+                        <td>Eliminati al termine della diretta</td>
+                    </tr>
+                    <tr>
+                        <td>Log di sicurezza</td>
+                        <td><span class="highlight">[DA COMPLETARE - ES: 12 mesi]</span></td>
+                    </tr>
+                    <tr>
+                        <td>Dati account eliminati</td>
+                        <td>Metadati minimi per <span class="highlight">[DA COMPLETARE - ES: 30 giorni]</span> per compliance</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card success-card">
+                <p class="card-title">✅ Cancellazione completa</p>
+                <p>
+                    Quando elimini il tuo account, cancelliamo permanentemente tutti i tuoi dati: 
+                    profilo, foto, messaggi, presenza nei gruppi e file di storage.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sezione 6: Terze Parti -->
+        <section class="section" id="condivisione">
+            <div class="section-header">
+                <div class="section-icon">🤝</div>
+                <h2>6. Condivisione con Terze Parti</h2>
+            </div>
+            <p>
+                <strong>Non vendiamo i tuoi dati.</strong> Condividiamo i dati solo con i fornitori 
+                necessari al funzionamento del servizio:
+            </p>
+
+            <div class="provider-list">
+                <div class="provider-item">
+                    <div class="provider-logo">🔥</div>
+                    <div class="provider-info">
+                        <h4>Firebase / Google Cloud Platform</h4>
+                        <p>Hosting, database, autenticazione, storage file</p>
+                    </div>
+                </div>
+                <div class="provider-item">
+                    <div class="provider-logo">👁️</div>
+                    <div class="provider-info">
+                        <h4>Google Cloud Vision API</h4>
+                        <p>Analisi automatica delle immagini per moderazione contenuti</p>
+                    </div>
+                </div>
+                <div class="provider-item">
+                    <div class="provider-logo">📹</div>
+                    <div class="provider-info">
+                        <h4>LiveKit</h4>
+                        <p>Streaming video/audio per le dirette nei gruppi</p>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top: 20px;">
+                Tutti i fornitori sono conformi al GDPR e i dati sono trattati all'interno dell'Unione Europea 
+                o in paesi con adeguate garanzie di protezione (clausole contrattuali standard).
+            </p>
+        </section>
+
+        <!-- Sezione 7: Sicurezza -->
+        <section class="section" id="sicurezza">
+            <div class="section-header">
+                <div class="section-icon">🔒</div>
+                <h2>7. Sicurezza dei Dati</h2>
+            </div>
+            <p>Adottiamo misure tecniche e organizzative per proteggere i tuoi dati:</p>
+            <div class="rights-grid">
+                <div class="right-item">
+                    <div class="right-icon">🔐</div>
+                    <div class="right-title">Password criptate</div>
+                    <div class="right-desc">Mai memorizzate in chiaro</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">📍</div>
+                    <div class="right-title">Posizione approssimata</div>
+                    <div class="right-desc">Arrotondata a ~1 km</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">🚫</div>
+                    <div class="right-title">Rate limiting</div>
+                    <div class="right-desc">Protezione contro abusi</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">🔑</div>
+                    <div class="right-title">Re-autenticazione</div>
+                    <div class="right-desc">Per operazioni sensibili</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">⏱️</div>
+                    <div class="right-title">Timeout sessione</div>
+                    <div class="right-desc">Logout automatico dopo 30 giorni</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">📸</div>
+                    <div class="right-title">Anti-screenshot</div>
+                    <div class="right-desc">Protezione contenuti (best-effort)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione 8: Diritti -->
+        <section class="section" id="diritti">
+            <div class="section-header">
+                <div class="section-icon">✊</div>
+                <h2>8. I Tuoi Diritti</h2>
+            </div>
+            <p>In base al GDPR, hai i seguenti diritti sui tuoi dati personali:</p>
+            
+            <div class="rights-grid">
+                <div class="right-item">
+                    <div class="right-icon">👀</div>
+                    <div class="right-title">Accesso</div>
+                    <div class="right-desc">Visualizza i tuoi dati nel profilo</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">✏️</div>
+                    <div class="right-title">Rettifica</div>
+                    <div class="right-desc">Modifica i dati dall'app</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">🗑️</div>
+                    <div class="right-title">Cancellazione</div>
+                    <div class="right-desc">Elimina l'account dalle impostazioni</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">⏸️</div>
+                    <div class="right-title">Limitazione</div>
+                    <div class="right-desc">Richiedi la limitazione del trattamento</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">📦</div>
+                    <div class="right-title">Portabilità</div>
+                    <div class="right-desc">Richiedi i tuoi dati in formato digitale</div>
+                </div>
+                <div class="right-item">
+                    <div class="right-icon">🚫</div>
+                    <div class="right-title">Opposizione</div>
+                    <div class="right-desc">Opponiti a determinati trattamenti</div>
+                </div>
+            </div>
+
+            <p>
+                Per esercitare i tuoi diritti, contattaci all'indirizzo 
+                <span class="highlight">[DA COMPLETARE - EMAIL]</span> o utilizza le funzioni 
+                disponibili nell'app (Impostazioni > Privacy > Account).
+            </p>
+            <p>
+                Hai inoltre il diritto di presentare un reclamo al <strong>Garante per la Protezione 
+                dei Dati Personali</strong> (www.garanteprivacy.it) se ritieni che i tuoi diritti 
+                siano stati violati.
+            </p>
+        </section>
+
+        <!-- Sezione 9: Minori -->
+        <section class="section" id="minori">
+            <div class="section-header">
+                <div class="section-icon">🔞</div>
+                <h2>9. Minori</h2>
+            </div>
+            <div class="card warning-card">
+                <p class="card-title">⚠️ Servizio riservato ai maggiorenni</p>
+                <p>
+                    L'App è destinata esclusivamente a utenti di età pari o superiore a <strong>18 anni</strong>. 
+                    Non raccogliamo consapevolmente dati di minori.
+                </p>
+            </div>
+            <p>
+                Verifichiamo l'età durante la registrazione richiedendo la data di nascita. 
+                Se veniamo a conoscenza di un account appartenente a un minore, lo elimineremo immediatamente.
+            </p>
+            <p>
+                Se sei un genitore/tutore e ritieni che tuo figlio abbia creato un account, 
+                contattaci a <span class="highlight">[DA COMPLETARE - EMAIL]</span>.
+            </p>
+        </section>
+
+        <!-- Sezione 10: Modifiche -->
+        <section class="section" id="modifiche">
+            <div class="section-header">
+                <div class="section-icon">📝</div>
+                <h2>10. Modifiche alla Policy</h2>
+            </div>
+            <p>
+                Potremmo aggiornare questa Privacy Policy periodicamente. In caso di modifiche sostanziali, 
+                ti informeremo tramite:
+            </p>
+            <ul>
+                <li>Notifica push nell'App</li>
+                <li>Email all'indirizzo registrato</li>
+                <li>Avviso visibile all'apertura dell'App</li>
+            </ul>
+            <p>
+                Ti invitiamo a consultare regolarmente questa pagina. La data dell'ultimo aggiornamento 
+                è indicata in cima al documento.
+            </p>
+        </section>
+
+        <!-- Sezione 11: Contatti -->
+        <section class="section" id="contatti">
+            <div class="section-header">
+                <div class="section-icon">📬</div>
+                <h2>11. Contatti</h2>
+            </div>
+            <p>
+                Per domande, richieste o reclami relativi alla privacy e al trattamento dei tuoi dati 
+                personali, puoi contattarci:
+            </p>
+            <div class="contact-card">
+                <h3>📧 Scrivici</h3>
+                <p>Risponderemo entro 30 giorni dalla ricezione della richiesta</p>
+                <a href="mailto:[DA COMPLETARE]" class="contact-email">
+                    <span class="highlight">[DA COMPLETARE - EMAIL]</span>
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
         <p>
-            <span class="highlight">[DA COMPLETARE - NOME/RAGIONE SOCIALE]</span><br>
-            Sede: <span class="highlight">[DA COMPLETARE - INDIRIZZO]</span><br>
-            P.IVA/C.F.: <span class="highlight">[DA COMPLETARE - P.IVA O CODICE FISCALE]</span><br>
-            Email: <span class="highlight">[DA COMPLETARE - EMAIL]</span>
+            © <span class="highlight">[DA COMPLETARE - ANNO]</span> 
+            <span class="highlight">[DA COMPLETARE - NOME]</span>. Tutti i diritti riservati.
         </p>
-    </div>
-
-    <h2>1. Accettazione dei Termini</h2>
-    <p>
-        I presenti Termini e Condizioni ("Termini") regolano l'utilizzo dell'applicazione mobile 
-        <strong>Tau</strong> ("App", "Servizio"), una piattaforma di incontri e socializzazione.
-    </p>
-    <p>
-        Accedendo o utilizzando l'App, l'utente ("Utente", "tu") accetta integralmente i presenti Termini. 
-        Se non accetti questi Termini, non puoi utilizzare il Servizio.
-    </p>
-    <p>
-        L'utilizzo del Servizio è inoltre soggetto alla nostra 
-        <a href="privacy-policy.html">Privacy Policy</a>, che descrive come raccogliamo e trattiamo i tuoi dati personali.
-    </p>
-
-    <h2>2. Requisiti di Età e Idoneità</h2>
-    
-    <div class="card warning">
-        <p><strong>IMPORTANTE:</strong> L'App è riservata esclusivamente a persone maggiorenni (18 anni o più). 
-        Registrandoti, dichiari e garantisci di avere almeno 18 anni di età.</p>
-    </div>
-
-    <p>Per utilizzare l'App, devi:</p>
-    <ul>
-        <li>Avere almeno <strong>18 anni</strong> di età</li>
-        <li>Avere la capacità legale di stipulare un contratto vincolante</li>
-        <li>Non essere stato precedentemente sospeso o rimosso dal Servizio</li>
-        <li>Non avere condanne per reati sessuali, violenti o di stalking</li>
-        <li>Rispettare tutte le leggi applicabili nel tuo paese di residenza</li>
-    </ul>
-    <p>
-        Ci riserviamo il diritto di richiedere prova dell'età in qualsiasi momento e di sospendere 
-        o terminare account che risultino appartenere a minori.
-    </p>
-
-    <h2>3. Registrazione e Account</h2>
-    
-    <h3>3.1 Creazione dell'Account</h3>
-    <p>Per utilizzare l'App è necessario creare un account fornendo:</p>
-    <ul>
-        <li>Indirizzo email valido</li>
-        <li>Password sicura</li>
-        <li>Nome (come vuoi essere chiamato)</li>
-        <li>Data di nascita (per verifica età 18+)</li>
-        <li>Genere</li>
-        <li>Almeno una foto profilo</li>
-        <li>Interessi e preferenze</li>
-    </ul>
-
-    <h3>3.2 Veridicità delle Informazioni</h3>
-    <p>
-        Ti impegni a fornire informazioni <strong>veritiere, accurate e aggiornate</strong>. 
-        È vietato:
-    </p>
-    <ul>
-        <li>Creare profili falsi o ingannevoli</li>
-        <li>Usare foto di altre persone senza autorizzazione</li>
-        <li>Mentire sulla propria età, identità o stato civile</li>
-        <li>Creare più di un account</li>
-    </ul>
-
-    <h3>3.3 Sicurezza dell'Account</h3>
-    <p>
-        Sei responsabile della riservatezza delle tue credenziali di accesso. 
-        Devi notificarci immediatamente qualsiasi uso non autorizzato del tuo account 
-        scrivendo a <span class="highlight">[DA COMPLETARE - EMAIL SUPPORTO]</span>.
-    </p>
-
-    <h2>4. Utilizzo del Servizio</h2>
-
-    <h3>4.1 Funzionalità Principali</h3>
-    <p>L'App offre le seguenti funzionalità:</p>
-    <ul>
-        <li><strong>Profilo personale:</strong> Creazione e gestione del proprio profilo con foto, bio e interessi</li>
-        <li><strong>Discovery:</strong> Visualizzazione di profili di altri utenti nelle vicinanze</li>
-        <li><strong>Messaggistica:</strong> Chat private tra utenti</li>
-        <li><strong>Gruppi:</strong> Stanze di chat di gruppo tematiche</li>
-        <li><strong>Live streaming:</strong> Trasmissioni video in diretta nei gruppi</li>
-        <li><strong>Chat private nei gruppi:</strong> Conversazioni 1-to-1 all'interno dei gruppi</li>
-    </ul>
-
-    <h3>4.2 Geolocalizzazione</h3>
-    <p>
-        L'App utilizza la tua posizione geografica per mostrarti utenti nelle vicinanze. 
-        Per proteggere la tua privacy, le coordinate vengono <strong>arrotondate a circa 1 km</strong> 
-        di precisione prima di essere salvate.
-    </p>
-    <p>
-        La geolocalizzazione è opzionale ma necessaria per alcune funzionalità. 
-        Puoi revocare il consenso in qualsiasi momento dalle impostazioni del tuo dispositivo.
-    </p>
-
-    <h3>4.3 Live Streaming</h3>
-    <p>
-        La funzione di live streaming permette di trasmettere video in tempo reale all'interno dei gruppi. 
-        Utilizzando questa funzione:
-    </p>
-    <ul>
-        <li>Acconsenti alla trasmissione della tua immagine e voce</li>
-        <li>Ti impegni a non trasmettere contenuti vietati (vedi Sezione 5)</li>
-        <li>Accetti che altri utenti possano visualizzare la tua trasmissione</li>
-    </ul>
-    <p>Le trasmissioni live <strong>non vengono registrate</strong> e sono disponibili solo in tempo reale.</p>
-
-    <h2>5. Comportamenti Vietati</h2>
-
-    <div class="card warning">
-        <p><strong>La violazione di queste regole comporta la sospensione o eliminazione immediata dell'account.</strong></p>
-    </div>
-
-    <h3>5.1 Contenuti Vietati</h3>
-    <p>È severamente vietato pubblicare, condividere o trasmettere:</p>
-    <ul>
-        <li>Contenuti sessualmente espliciti o pornografici</li>
-        <li>Nudità non consensuale o "revenge porn"</li>
-        <li>Contenuti che coinvolgono minori</li>
-        <li>Contenuti violenti, cruenti o che incitano alla violenza</li>
-        <li>Contenuti che promuovono odio, discriminazione o razzismo</li>
-        <li>Contenuti diffamatori, calunniosi o molesti</li>
-        <li>Spam, pubblicità non autorizzata o contenuti commerciali</li>
-        <li>Malware, virus o link dannosi</li>
-        <li>Contenuti protetti da copyright senza autorizzazione</li>
-    </ul>
-
-    <h3>5.2 Comportamenti Vietati</h3>
-    <p>È vietato:</p>
-    <ul>
-        <li>Molestare, minacciare o intimidire altri utenti</li>
-        <li>Stalking online o offline</li>
-        <li>Richiedere denaro o informazioni finanziarie</li>
-        <li>Promuovere attività illegali</li>
-        <li>Impersonare altre persone o entità</li>
-        <li>Utilizzare bot, script o strumenti automatizzati</li>
-        <li>Tentare di accedere ad account altrui</li>
-        <li>Eludere le misure di sicurezza o moderazione</li>
-        <li>Raccogliere dati di altri utenti senza consenso</li>
-        <li>Utilizzare l'App per scopi diversi da quelli previsti</li>
-    </ul>
-
-    <h3>5.3 Moderazione dei Contenuti</h3>
-    <p>
-        Per garantire la sicurezza della community, utilizziamo sistemi automatizzati di moderazione 
-        basati su intelligenza artificiale (Google Cloud Vision API) per analizzare le immagini 
-        caricate e rilevare contenuti potenzialmente inappropriati.
-    </p>
-    <p>
-        Ci riserviamo il diritto di rimuovere qualsiasi contenuto e di sospendere o eliminare 
-        account che violino questi Termini, a nostra esclusiva discrezione.
-    </p>
-
-    <h2>6. Segnalazioni e Blocco Utenti</h2>
-
-    <h3>6.1 Segnalazione di Violazioni</h3>
-    <p>
-        Se riscontri comportamenti o contenuti che violano questi Termini, puoi segnalarli 
-        direttamente dall'App. Esamineremo ogni segnalazione e prenderemo le misure appropriate.
-    </p>
-    <p>Motivi di segnalazione disponibili:</p>
-    <ul>
-        <li>Spam</li>
-        <li>Molestie</li>
-        <li>Contenuto inappropriato</li>
-        <li>Profilo falso</li>
-        <li>Utente minorenne</li>
-        <li>Altro</li>
-    </ul>
-
-    <h3>6.2 Blocco Utenti</h3>
-    <p>
-        Puoi bloccare qualsiasi utente in qualsiasi momento. Un utente bloccato non potrà 
-        più contattarti o visualizzare il tuo profilo.
-    </p>
-
-    <h2>7. Contenuti dell'Utente</h2>
-
-    <h3>7.1 Proprietà dei Contenuti</h3>
-    <p>
-        Mantieni la proprietà di tutti i contenuti che carichi sull'App (foto, messaggi, bio, ecc.). 
-        Tuttavia, caricando contenuti, ci concedi una licenza mondiale, non esclusiva, 
-        trasferibile, sublicenziabile e royalty-free per utilizzare, riprodurre, modificare e 
-        visualizzare tali contenuti al fine di fornire e migliorare il Servizio.
-    </p>
-
-    <h3>7.2 Responsabilità per i Contenuti</h3>
-    <p>
-        Sei l'unico responsabile dei contenuti che pubblichi. Dichiari e garantisci di avere 
-        tutti i diritti necessari per pubblicare tali contenuti e che questi non violano 
-        diritti di terzi o leggi applicabili.
-    </p>
-
-    <h2>8. Privacy e Protezione dei Dati</h2>
-    <p>
-        La raccolta e il trattamento dei tuoi dati personali sono regolati dalla nostra 
-        <a href="privacy-policy.html">Privacy Policy</a>. Utilizzando l'App, accetti le 
-        pratiche descritte nella Privacy Policy.
-    </p>
-    <p>In sintesi:</p>
-    <ul>
-        <li>Raccogliamo solo i dati necessari al funzionamento del Servizio</li>
-        <li>Le coordinate GPS vengono arrotondate per proteggere la tua privacy</li>
-        <li>Puoi richiedere la cancellazione completa del tuo account e dei tuoi dati in qualsiasi momento</li>
-        <li>Non vendiamo i tuoi dati a terzi</li>
-    </ul>
-
-    <h2>9. Sospensione e Terminazione</h2>
-
-    <h3>9.1 Terminazione da Parte Tua</h3>
-    <p>
-        Puoi eliminare il tuo account in qualsiasi momento dalle impostazioni dell'App. 
-        L'eliminazione comporta la cancellazione permanente di:
-    </p>
-    <ul>
-        <li>Il tuo profilo e tutte le informazioni associate</li>
-        <li>Tutte le tue foto</li>
-        <li>Tutti i tuoi messaggi e conversazioni</li>
-        <li>I tuoi dati di presenza nei gruppi</li>
-    </ul>
-    <p>Questa operazione è <strong>irreversibile</strong>.</p>
-
-    <h3>9.2 Sospensione o Terminazione da Parte Nostra</h3>
-    <p>Possiamo sospendere o terminare il tuo account, con o senza preavviso, se:</p>
-    <ul>
-        <li>Violi questi Termini o le nostre policy</li>
-        <li>Il tuo comportamento danneggia altri utenti o il Servizio</li>
-        <li>Siamo obbligati per legge</li>
-        <li>L'account risulta inattivo per un periodo prolungato</li>
-    </ul>
-
-    <h2>10. Limitazione di Responsabilità</h2>
-
-    <div class="card">
-        <p><strong>IMPORTANTE - LEGGI ATTENTAMENTE</strong></p>
-    </div>
-
-    <h3>10.1 Servizio "Così Com'è"</h3>
-    <p>
-        Il Servizio viene fornito "così com'è" e "come disponibile", senza garanzie di alcun tipo, 
-        espresse o implicite, incluse garanzie di commerciabilità, idoneità per uno scopo particolare 
-        o non violazione.
-    </p>
-
-    <h3>10.2 Interazioni tra Utenti</h3>
-    <p>
-        <strong>Non siamo responsabili per il comportamento degli utenti</strong>, sia online che offline. 
-        Non effettuiamo verifiche dei precedenti penali o dell'identità degli utenti 
-        (oltre alla verifica dell'età).
-    </p>
-    <p>
-        Ti invitiamo a usare cautela nelle interazioni con altri utenti e a segnalare 
-        qualsiasi comportamento sospetto. Per gli incontri di persona, consigliamo di:
-    </p>
-    <ul>
-        <li>Incontrare sempre in luoghi pubblici</li>
-        <li>Informare amici o familiari dei tuoi spostamenti</li>
-        <li>Non condividere informazioni personali sensibili (indirizzo, dati finanziari)</li>
-        <li>Fidarsi del proprio istinto</li>
-    </ul>
-
-    <h3>10.3 Esclusione di Responsabilità</h3>
-    <p>
-        Nei limiti consentiti dalla legge, non saremo responsabili per danni indiretti, incidentali, 
-        speciali, consequenziali o punitivi, inclusi perdita di profitti, dati, uso o altre perdite 
-        intangibili derivanti da:
-    </p>
-    <ul>
-        <li>L'uso o l'impossibilità di usare il Servizio</li>
-        <li>Comportamenti o contenuti di altri utenti</li>
-        <li>Accesso non autorizzato al tuo account</li>
-        <li>Interruzioni o errori del Servizio</li>
-    </ul>
-
-    <h2>11. Indennizzo</h2>
-    <p>
-        Accetti di indennizzare e manlevare <span class="highlight">[DA COMPLETARE - NOME]</span>, 
-        i suoi dirigenti, dipendenti e agenti da qualsiasi reclamo, danno, perdita, responsabilità, 
-        costo e spesa (incluse le spese legali) derivanti da:
-    </p>
-    <ul>
-        <li>Il tuo utilizzo del Servizio</li>
-        <li>La violazione di questi Termini</li>
-        <li>La violazione di diritti di terzi</li>
-        <li>I contenuti da te pubblicati</li>
-    </ul>
-
-    <h2>12. Modifiche ai Termini</h2>
-    <p>
-        Ci riserviamo il diritto di modificare questi Termini in qualsiasi momento. 
-        In caso di modifiche sostanziali, ti avviseremo tramite:
-    </p>
-    <ul>
-        <li>Notifica push nell'App</li>
-        <li>Email all'indirizzo registrato</li>
-        <li>Avviso visibile nell'App</li>
-    </ul>
-    <p>
-        L'uso continuato del Servizio dopo la pubblicazione delle modifiche costituisce 
-        accettazione dei nuovi Termini.
-    </p>
-
-    <h2>13. Disposizioni Generali</h2>
-
-    <h3>13.1 Intero Accordo</h3>
-    <p>
-        Questi Termini, insieme alla Privacy Policy, costituiscono l'intero accordo tra te e 
-        <span class="highlight">[DA COMPLETARE - NOME]</span> relativamente all'utilizzo del Servizio.
-    </p>
-
-    <h3>13.2 Separabilità</h3>
-    <p>
-        Se una disposizione di questi Termini viene ritenuta non valida o inapplicabile, 
-        le restanti disposizioni rimarranno pienamente in vigore.
-    </p>
-
-    <h3>13.3 Rinuncia</h3>
-    <p>
-        La mancata applicazione di un diritto o di una disposizione di questi Termini 
-        non costituisce rinuncia a tale diritto o disposizione.
-    </p>
-
-    <h3>13.4 Cessione</h3>
-    <p>
-        Non puoi cedere o trasferire questi Termini senza il nostro previo consenso scritto. 
-        Possiamo cedere i nostri diritti e obblighi senza restrizioni.
-    </p>
-
-    <h2>14. Legge Applicabile e Foro Competente</h2>
-    <p>
-        I presenti Termini sono regolati dalla legge italiana. Per qualsiasi controversia 
-        derivante da o relativa a questi Termini o al Servizio, sarà competente in via 
-        esclusiva il Foro di <span class="highlight">[DA COMPLETARE - CITTÀ]</span>, 
-        salvo diversa disposizione inderogabile di legge a tutela del consumatore.
-    </p>
-
-    <h2>15. Contatti</h2>
-    <p>Per domande, reclami o segnalazioni relative a questi Termini, puoi contattarci:</p>
-    <div class="card">
-        <p>
-            <strong>Email:</strong> <span class="highlight">[DA COMPLETARE - EMAIL]</span><br>
-            <strong>Indirizzo:</strong> <span class="highlight">[DA COMPLETARE - INDIRIZZO]</span>
+        <p style="margin-top: 10px;">
+            <a href="terms.html">Termini e Condizioni</a>
         </p>
-    </div>
-
-    <hr style="margin: 40px 0; border: none; border-top: 1px solid var(--border);">
-
-    <p style="text-align: center; font-size: 13px; color: var(--muted);">
-        © <span class="highlight">[DA COMPLETARE - ANNO]</span> <span class="highlight">[DA COMPLETARE - NOME]</span>. Tutti i diritti riservati.
-    </p>
+    </footer>
 
 </body>
 </html>
